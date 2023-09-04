@@ -26,3 +26,16 @@ CREATE TABLE posteos(
      
      FOREIGN KEY (idUsuario) REFERENCES usuarios(id)
 );
+
+CREATE TABLE comentarios(
+	 id  INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+     idPost INT UNSIGNED,
+     idUsuario INT UNSIGNED,
+     textoComment VARCHAR(200) NOT NULL,
+     createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     updatedAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+     deletedAt  TIMESTAMP NULL,
+     
+     FOREIGN KEY (idPost) REFERENCES posteos(id),
+     FOREIGN KEY (idUsuario) REFERENCES usuarios(id)
+);
