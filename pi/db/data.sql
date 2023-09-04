@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS dbPI;
+
+USE dbPI;
+
+CREATE TABLE usuarios (
+/*  nombreColumna    tipoDeDatos    restricciones  */
+    id  INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    email  VARCHAR(60) NOT NULL UNIQUE,
+    pass   VARCHAR(200) NOT NULL,
+    fotoPerfil  VARCHAR(400) NULL,
+    fecha  DATE NULL,
+    dni    INT UNIQUE NOT NULL,
+    createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deletedAt  TIMESTAMP NULL
+);
