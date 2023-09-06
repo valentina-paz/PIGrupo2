@@ -7,7 +7,7 @@ router.get('/miPerfil/id/:id', function(req, res, next) {
   res.render('miPerfil', { title: 'Express' });
 });
 
-router.get('/editarMiPerfil', function(req, res, next) {
+router.get('/editarMiPerfil/id/:id', function(req, res, next) {
   res.render('editarPerfil', { title: 'Express' });
 });
 
