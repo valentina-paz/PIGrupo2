@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const usuariosController= require("../controllers/usuariosController")
+
 
 /* GET users listing. */
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */

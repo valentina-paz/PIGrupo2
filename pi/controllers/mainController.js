@@ -1,7 +1,8 @@
 const data= require("../db/data");
+
 const mainController = {
     index: function(req, res, next) {
-        res.render('index', { title: 'Express' });
+        res.render('index', { usuario: data.usuarios });
       },
     login: function(req, res, next) {
         res.render('login', { title: 'Express' });
