@@ -45,305 +45,305 @@ const data= {
     posteos: [
         {
             id:1,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 1,
+            nombreImg: "Bali",
             textoPost:"La vida es corta, los viajes son largos."
         },
         {
             id:2,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 1,
+            nombreImg: "Paris",
             textoPost:"Los viajes te enseñan a apreciar la belleza de la simplicidad."
         },
         {
             id:3,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 2,
+            nombreImg: "Londres",
             textoPost:"La mejor inversión es en experiencias, no en cosas materiales."
         },
         {
             id:4,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 2,
+            nombreImg: "Indonesia",
             textoPost:"No hay mapa para los tesoros que encuentras mientras viajas."
         },
         {
             id:5,
-            idUsuario: ,
-            nombreImg: ,
-            textoPost:"El mundo es un libro y aquellos que no viajan leen solo una página.
+            idUsuario: 3,
+            nombreImg: "Amsterdam",
+            textoPost:"El mundo es un libro y aquellos que no viajan leen solo una página."
         },
         {
             id:6,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 3,
+            nombreImg: "Moscu",
             textoPost:"Cada lugar tiene una historia, estoy aquí para escucharlas."
         },
         {
             id:7,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 4,
+            nombreImg: "Barcelona",
             textoPost:"Las mejores historias se escriben en la carretera."
         },
         {
             id:8,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 4,
+            nombreImg: "Madrid",
             textoPost:"Viajar es la mejor forma de reinventarse."
         },
         {
             id:9,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 5,
+            nombreImg: "Bariloche",
             textoPost:"Descubriendo nuevos horizontes y creando recuerdos inolvidables."
         },
         {
             id:10,
-            idUsuario: ,
-            nombreImg: ,
+            idUsuario: 5,
+            nombreImg: "Salta",
             textoPost:"Viajar es la única cosa que compras y que te hace más rico. "
         },
     ],
     comentarios: [
         {
             id:1, 
-            idPost: ,
-            idUsuario: ,
-            textoComment: 
+            idPost: 1,
+            idUsuario: 1,
+            textoComment: "Qué lugar tan hermoso, ¿dónde estás exactamente?"
         },
         {
             id:2,
-            idPost: ,
-            idUsuario: ,
-            textoComment: 
+            idPost: 1,
+            idUsuario: 2,
+            textoComment: "¡Quiero ir allí! ¿Puedes recomendarme algún lugar para visitar?"
         },
         {
             id:3, 
-            idPost: ,
-            idUsuario: 
-            textoComment: 
+            idPost: 1,
+            idUsuario: 3,
+            textoComment: "Definitivamente, tienes el don de capturar momentos especiales."
         },
         {
-            id:4  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:4,  
+            idPost: 1,
+            idUsuario: 4,
+            textoComment: "Gracias por llevarnos virtualmente contigo en tus viajes. ¡Es un placer seguirte!"
         },
         {
-            id:5  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:5,  
+            idPost: 2,
+            idUsuario: 5,
+            textoComment: "¿Tienes algún consejo para planificar un viaje como este?"
         },
         {
-            id:6  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:6,  
+            idPost: 2,
+            idUsuario: 1,
+            textoComment: "¡Qué suerte tienes de haber estado allí! Debe haber sido una experiencia única."
         },
         {
-            id:7  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:7,  
+            idPost: 2,
+            idUsuario: 2,
+            textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
         },
         {
-            id:8  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:8,  
+            idPost: 2,
+            idUsuario: 3,
+            textoComment: "Tus viajes son una verdadera obra de arte. ¡Sigue viviendo la vida al máximo!"
         },
         {
-            id:9  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:9,  
+            idPost: 3,
+            idUsuario: 4,
+            textoComment: "Tu amor por los viajes realmente brilla en cada foto."
         },
         {
-            id:10  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:10,  
+            idPost: 3,
+            idUsuario: 5,
+            textoComment: "Me encantaría escuchar la historia detrás de esta foto."
         },
         {
-            id:11  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:11,  
+            idPost: 3,
+            idUsuario: 1,
+            textoComment: "Me encanta tu espíritu aventurero, ¡sigue explorando!"
         },
         {
-            id:12  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:12,  
+            idPost: 3,
+            idUsuario: 2,
+            textoComment: "Las fotos son impresionantes, ¡deben haber sido momentos inolvidables!"
         },
         {
-            id:13  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:13,  
+            idPost: 4,
+            idUsuario: 3,
+            textoComment: "Tu galería de viajes es una fuente constante de inspiración."
         },
         {
-            id:14  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:14,  
+            idPost: 4,
+            idUsuario: 4,
+            textoComment: "¿Qué cámara utilizaste para tomar estas fotos? La calidad es impresionante."
         },
         {
-            id:15  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:15,  
+            idPost: 4,
+            idUsuario: 5,
+            textoComment: "La naturalidad en tus fotos de viajes es lo que más me gusta."
         },
         {
-            id:16  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:16,  
+            idPost: 4,
+            idUsuario: 1,
+            textoComment: "Tu pasión por explorar el mundo es realmente contagiosa."
         },
         {
-            id:17  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:17,  
+            idPost: 5,
+            idUsuario: 2,
+            textoComment: "Cada viaje es una lección de vida. ¿Qué has aprendido en este?"
         },
         {
-            id:18  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:18,  
+            idPost: 5,
+            idUsuario: 3,
+            textoComment: "Sigo esperando el día en que pueda visitar este lugar hermoso."
         },
         {
-            id:19 
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:19, 
+            idPost: 5,
+            idUsuario: 4,
+            textoComment: "¡Me estás haciendo desear tomar un vuelo ahora mismo!"
         },
         {
-            id:20  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:20,  
+            idPost: 5,
+            idUsuario: 5,
+            textoComment: "Gracias por recordarnos que el mundo es un lugar hermoso que vale la pena explorar."
         },
         {
-            id:21  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:21,  
+            idPost: 6,
+            idUsuario: 1,
+            textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
         },
         {
-            id:22  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:22,  
+            idPost: 6,
+            idUsuario: 2,
+            textoComment: "Qué maravillosa experiencia de viaje. ¿Quién más se siente tentado a empacar sus maletas y unirse a esta aventura?"
         },
         {
-            id:23  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:23,  
+            idPost: 6,
+            idUsuario: 3,
+            textoComment: "Los viajes son una fuente inagotable de aprendizaje y crecimiento personal."
         },
         {
-            id:24  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:24,  
+            idPost: 6,
+            idUsuario: 4,
+            textoComment: "¡Qué envidia de ese lugar! ¿Cómo llegaste allí?"
         },
         {
-            id:25  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:25,  
+            idPost: 7,
+            idUsuario: 5,
+            textoComment: "¡Qué paisaje tan espectacular! Seguro que lo pasaste genial."
         },
         {
-            id:26  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:26,  
+            idPost: 7,
+            idUsuario: 1,
+            textoComment: "Esto me da ganas de planear mi próximo viaje. ¡Gracias por la inspiración!"
         },
         {
-            id:27 
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:27, 
+            idPost: 7,
+            idUsuario: 2,
+            textoComment: "¡Estás viviendo la vida al máximo! "
         },
         {
-            id:28  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:28,  
+            idPost: 7,
+            idUsuario: 3,
+            textoComment: "¿Algún consejo para quienes quieren visitar ese lugar?"
         },
         {
-            id:29  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:29,  
+            idPost: 8,
+            idUsuario: 4,
+            textoComment: "¡Qué vista increíble! ¿Es tan hermoso como parece en la foto?"
         },
         {
-            id:30  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:30,  
+            idPost: 8,
+            idUsuario: 5,
+            textoComment: "¡Deseando estar allí ahora mismo! "
         },
         {
-            id:31  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:31,  
+            idPost: 8,
+            idUsuario: 1,
+            textoComment: "Me encantaría saber más sobre tu experiencia en este viaje."
         },
         {
-            id:32  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:32,  
+            idPost: 8,
+            idUsuario: 2,
+            textoComment: "¿Cuál fue tu parte favorita de este viaje?"
         },
         {
-            id:33  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:33,  
+            idPost: 9,
+            idUsuario: 3,
+            textoComment: "Estás haciendo que todos queramos viajar contigo. "
         },
         {
-            id:34  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:34,  
+            idPost: 9,
+            idUsuario: 4,
+            textoComment: "Increíble foto, ¡debe haber sido una experiencia inolvidable!"
         },
         {
-            id:35  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:35,  
+            idPost: 9,
+            idUsuario: 5,
+            textoComment: "¿Algún momento destacado que quieras compartir con nosotros?"
         },
         {
-            id:36  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:36, 
+            idPost: 9,
+            idUsuario: 1,
+            textoComment: "Este lugar está definitivamente en mi lista de deseos de viaje ahora."
         },
         {
-            id:37  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:37,  
+            idPost: 10,
+            idUsuario: 2,
+            textoComment: "¡Qué aventura tan emocionante! ¿Tienes más fotos para compartir?"
         },
         {
-            id:38  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:38,  
+            idPost: 10,
+            idUsuario: 3,
+            textoComment: "Esa puesta de sol es de ensueño. "
         },
         {
-            id:39  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:39,  
+            idPost: 10,
+            idUsuario: 4,
+            textoComment: "¿Algún consejo sobre lugares para comer o cosas que hacer allí?"
         },
         {
-            id:40  
-            idPost: 
-            idUsuario: 
-            textoComment: 
+            id:40,  
+            idPost: 10,
+            idUsuario: 5,
+            textoComment: "¡Qué maravilloso destino! ¿Cuánto tiempo estuviste allí?"
         }
     ]
 };
