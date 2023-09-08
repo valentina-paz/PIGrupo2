@@ -2,7 +2,7 @@ const data= {
     usuarios:[
         {
             id:1,
-            email: 'juan.holder@example.com',
+            email: 'juan.holder@gmail.com',
             pass: 'Password123' ,
             fotoPerfil: '/img/juan.png',
             fecha: '15/05/1987',
@@ -10,7 +10,7 @@ const data= {
         },
         {
             id:2,
-            email: 'maria.rodriguez@example.com',
+            email: 'maria.rodriguez@gmail.com',
             pass: 'SecurePass!23' ,
             fotoPerfil: '/img/maria.png',
             fecha: '20/09/1990',
@@ -18,7 +18,7 @@ const data= {
         },
         {
             id:3,
-            email: 'carlos.gonzalez@example.com',
+            email: 'carlos.gonzalez@gmail.com',
             pass: 'Password456' ,
             fotoPerfil: '/img/carlos.png',
             fecha: '03/12/1985',
@@ -26,7 +26,7 @@ const data= {
         },
         {
             id:4,
-            email: 'paula.fernandez@example.com',
+            email: 'paula.fernandez@gmail.com',
             pass: 'SecurePass123' ,
             fotoPerfil: '/img/paula.png',
             fecha: '10/11/1992',
@@ -34,7 +34,7 @@ const data= {
         },
         {
             id:5,
-            email: 'gonzalo.perez@example.com',
+            email: 'gonzalo.perez@gmail.com',
             pass: 'Pass123word' ,
             fotoPerfil: '/img/gonzalo.png',
             fecha: '27/06/1989',
