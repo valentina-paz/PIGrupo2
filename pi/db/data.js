@@ -103,6 +103,7 @@ const data= {
             nombreImg: "Salta",
             textoPost:"Viajar es la única cosa que compras y que te hace más rico. "
         },
+        
     ],
     comentarios: [
         {
@@ -347,3 +348,5 @@ const data= {
         }
     ]
 };
+
+module.exports=data;
