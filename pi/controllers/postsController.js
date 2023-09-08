@@ -8,5 +8,5 @@ const postsController ={
         res.render('agregarPost', { title: 'Express' });
       }
 };
-
+/* cambiar el dato title que le estamos mandando por los correspondientes datos */
 module.exports= postsController;
