@@ -1,15 +1,12 @@
 var express = require('express');
 var router = express.Router();
+const postsController= require("../controllers/postsController")
 
 /* GET home page. */
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */
-router.get('/detalle/id/:id', function(req, res, next) {
-  res.render('detallePost', { title: 'Express' });
-});
+router.get('/detalle/id/:id', postsController.detalle);
 
-router.get('/agregar', function(req, res, next) {
-    res.render('agregarPost', { title: 'Express' });
-  });
+router.get('/agregar', postsController.agregarPost);
 
 /* 1) esta bien que detalle tenga id?
    2) agregar tambien tiene que tener id?

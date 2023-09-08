@@ -1,23 +1,16 @@
 var express = require('express');
 var router = express.Router();
+const mainController= require("../controllers/mainController")
 
 /* GET home page. */
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', mainController.index);
 
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Express' });
-});
+router.get('/login', mainController.login);
 
-router.get('/registracion', function(req, res, next) {
-  res.render('registracion', { title: 'Express' });
-});
+router.get('/registracion', mainController.register);
 
-router.get('/busqueda', function(req, res, next) {
-  res.render('resultadoBusqueda', { title: 'Express' });
-});
+router.get('/busqueda', mainController.busqueda);
 
 module.exports = router;
 
