@@ -2,7 +2,8 @@ const data= require("../db/data");
 
 const postsController ={
     detalle: function(req, res, next) {
-        res.render('detallePost', { title: 'Express' });
+      let id= req.params.id;
+        res.render('detallePost', { idPost: id, usuario: data.usuarios, posteos: data.posteos});
       },
     agregarPost: function(req, res, next) {
         res.render('agregarPost', { title: 'Express' });

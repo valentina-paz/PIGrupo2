@@ -46,7 +46,7 @@ const data= {
         {
             id:1,
             idUsuario: 1,
-            nombreImg: "Bali",
+            nombreImg: "https://i.pinimg.com/564x/37/9a/b5/379ab510798c0e6928fbce586e3d90f4.jpg",
             textoPost:"La vida es corta, los viajes son largos.",
             comentarios: [{
                 id:1, 
@@ -76,7 +76,7 @@ const data= {
         {
             id:2,
             idUsuario: 1,
-            nombreImg: "Paris",
+            nombreImg: "https://i.pinimg.com/564x/4d/22/34/4d22349d367c30f7eafbe3bd11cebfe4.jpg",
             textoPost:"Los viajes te enseñan a apreciar la belleza de la simplicidad.",
             comentarios: [{
                 id:5,  
@@ -106,7 +106,7 @@ const data= {
         {
             id:3,
             idUsuario: 2,
-            nombreImg: "Londres",
+            nombreImg: "https://i.pinimg.com/564x/15/4c/9d/154c9d1148d37405652effe485d4faed.jpg",
             textoPost:"La mejor inversión es en experiencias, no en cosas materiales.",
             comentarios: [{
                 id:9,  
@@ -136,7 +136,7 @@ const data= {
         {
             id:4,
             idUsuario: 2,
-            nombreImg: "Indonesia",
+            nombreImg: "https://i.pinimg.com/564x/b3/de/5d/b3de5d44c827243aaeb04d147befcdfa.jpg",
             textoPost:"No hay mapa para los tesoros que encuentras mientras viajas.",
             comentarios: [{
                 id:13,  
@@ -166,7 +166,7 @@ const data= {
         {
             id:5,
             idUsuario: 3,
-            nombreImg: "Amsterdam",
+            nombreImg: "https://viajes.nationalgeographic.com.es/medio/2019/03/27/bagan_5e8e026d_500x782.jpg",
             textoPost:"El mundo es un libro y aquellos que no viajan leen solo una página.",
             comentarios: [{
                 id:17,  
@@ -196,7 +196,7 @@ const data= {
         {
             id:6,
             idUsuario: 3,
-            nombreImg: "Moscu",
+            nombreImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88yDNltUzMGdsh58ayNBSW4qLS6HcaydGTxFqffj0wpPIZkUlv1P1Ii_hfpNyuobv6io&usqp=CAU",
             textoPost:"Cada lugar tiene una historia, estoy aquí para escucharlas.",
             comentarios: [{
                 id:21,  
@@ -226,7 +226,7 @@ const data= {
         {
             id:7,
             idUsuario: 4,
-            nombreImg: "Barcelona",
+            nombreImg: "https://i.pinimg.com/564x/23/fb/aa/23fbaa667b4e6b09321a6b968b128198.jpg",
             textoPost:"Las mejores historias se escriben en la carretera.",
             comentarios: [{
                 id:25,  
@@ -256,7 +256,7 @@ const data= {
         {
             id:8,
             idUsuario: 4,
-            nombreImg: "Madrid",
+            nombreImg: "https://i.pinimg.com/564x/e7/71/e8/e771e8b1994a91441f73216af860671f.jpg",
             textoPost:"Viajar es la mejor forma de reinventarse.",
             comentarios: [        {
                 id:29,  
@@ -286,7 +286,7 @@ const data= {
         {
             id:9,
             idUsuario: 5,
-            nombreImg: "Bariloche",
+            nombreImg: "https://i.pinimg.com/564x/e0/d3/49/e0d3495dcfb4af549c8b15b11931c3c5.jpg",
             textoPost:"Descubriendo nuevos horizontes y creando recuerdos inolvidables.",
             comentarios: [{
                 id:33,  
@@ -316,7 +316,7 @@ const data= {
         {
             id:10,
             idUsuario: 5,
-            nombreImg: "Salta",
+            nombreImg: "https://i.pinimg.com/564x/e3/89/cf/e389cfca3618ef65ef2e207a6712ef8f.jpg",
             textoPost:"Viajar es la única cosa que compras y que te hace más rico.",
             comentarios: [{
                 id:37,  

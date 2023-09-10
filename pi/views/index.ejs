@@ -3,50 +3,62 @@
 
 <%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
+    <body>
+        <%- include('./partials/header') %>
 
-    <main>
-        <section class="center main-content">
-            <% for( let i = 0; i < usuario.length; i++ ) { %>
-                <article class="post">
-                    <div class="info-usuario ">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <h4>
-                            <a href="/usuarios/detalleUsuario/id/<%= usuario[i].id %>"><%= usuario[i].email %></a>
-                        </h4>
-                    </div>
-                    <div class="post-body">
-                        <a href="/posts/detalle/id/<%= [i]%>">
-                            <img src="https://via.placeholder.com/500x600" alt="">
-                        </a>
-                    </div>
-                    <ul class="post-reacciones">
-                        <li>
-                            <i class="fa-regular fa-heart"></i>
-                        </li>
-                        <li>
-                            <i class="fa-regular fa-comment"></i>
-                        </li>
-                    </ul>
-                    <div class="post-comentarios">
-                        <h4>Comentarios</h4>
-                        <ul>
-                            <% for( let j = 0; j < posteos[i].comentarios.length; j++ ) { %>
-                                <li><a href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>"><%= usuario[j].email%></a>
-                                <span><%= posteos[i].comentarios[j].textoComment %></span>
-                            </li>
-                            <a href="/posts/detalle/id/<%= posteos[i].comentarios[j].idPost %>">Ver más...</a>
-                            <% } %>
-                        </ul>
-                    </div>
-                </article>
-            <% } %>
-        </section>    
-    </main>
+            <main>
+                <section class="center main-content">
+                    <% for( let i=0; i < usuario.length; i++ ) { %>
+                        <article class="post">
+                            <div class="info-usuario ">
+                                <img src="https://via.placeholder.com/40" alt="">
+                                <h4>
+                                    <a href="/usuarios/detalleUsuario/id/<%= usuario[i].id %>">
+                                        <%= usuario[i].email %>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="post-body">
+                                <% for( let k=0; k < posteos.length; k++ ) { %>
+                                    <% if (posteos[k].idUsuario==usuario[i].id) { %>
+                                        <a href="/posts/detalle/id/<%= posteos[k].id %>">
+                                            <img src="<%= posteos[k].nombreImg %>" alt="">
+                                        </a>
+                                        <% } %>
+                                            <% } %>
+                            </div>
+                            <ul class="post-reacciones">
+                                <li>
+                                    <i class="fa-regular fa-heart"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+                            </ul>
+                            <div class="post-comentarios">
+                                <h4>Comentarios</h4>
+                                <ul>
+                                    <% for( let j=0; j < posteos[i].comentarios.length; j++ ) { %>
+                                        <li><a
+                                                href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>">
+                                                <%= usuario[j].email%>
+                                            </a>
+                                            <span>
+                                                <%= posteos[i].comentarios[j].textoComment %>
+                                            </span>
+                                        </li>
+                                        <a href="/posts/detalle/id/<%= posteos[i].comentarios[j].idPost %>">Ver
+                                            más...</a>
+                                        <% } %>
+                                </ul>
+                            </div>
+                        </article>
+                        <% } %>
+                </section>
+            </main>
 
-    <%- include('./partials/footer') %>
+            <%- include('./partials/footer') %>
 
-</body>
+    </body>
 
 </html>
