@@ -12,7 +12,8 @@ const mainController = {
     res.render('registracion', { title: 'Express' });
   },
   busqueda: function (req, res, next) {
-    res.render('resultadoBusqueda', { title: 'Express' });
+    let id = req.params.id
+    res.render('index', { usuario: data.usuarios, idUsuario: id, posteos: data.posteos });
   }
 };
 

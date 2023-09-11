@@ -60,13 +60,15 @@ const data= {
                 idPost: 1,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
-                textoComment: "Qué lugar tan hermoso, dónde estás??"
+                fotoPerfil: '/img/gonzalo.png',
+                textoComment: "Qué lugar tan hermoso, dónde estás??",
             },
             {
                 id:2,
                 idPost: 1,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "Quiero ir ahí! Podés recomendarme algún lugar para visitar?"
             },
             {
@@ -74,6 +76,7 @@ const data= {
                 idPost: 1,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Definitivamente, tenés el don de capturar momentos especiales."
             },
             {
@@ -81,6 +84,7 @@ const data= {
                 idPost: 1,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "Gracias por llevarnos virtualmente con vos en tus viajes. Es un placer seguirte!!"
             }]
         },
@@ -96,6 +100,7 @@ const data= {
                 idPost: 2,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "Tenés algún consejo para planificar un viaje como este?"
             },
             {
@@ -103,6 +108,7 @@ const data= {
                 idPost: 2,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "¡Qué suerte tenés de haber estado ahí! Debe haber sido una experiencia única."
                 
             },
@@ -111,6 +117,7 @@ const data= {
                 idPost: 2,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. Es así de lindo en persona?"
             },
             {
@@ -118,6 +125,7 @@ const data= {
                 idPost: 2,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Tus viajes son una verdadera obra de arte. Seguí viviendo la vida al máximo!"
             }]
         },
@@ -133,6 +141,7 @@ const data= {
                 idPost: 3,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "Tu amor por los viajes realmente brilla en cada foto."
             },
             {
@@ -140,6 +149,7 @@ const data= {
                 idPost: 3,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "Me encantaría escuchar la historia detrás de esta foto."
             },
             {
@@ -147,6 +157,7 @@ const data= {
                 idPost: 3,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Me encanta tu espíritu aventurero, seguí explorando!"
             },
             {
@@ -154,6 +165,7 @@ const data= {
                 idPost: 3,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Las fotos son impresionantes, deben haber sido momentos inolvidables!"
             }]
         },
@@ -169,6 +181,7 @@ const data= {
                 idPost: 4,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Tu galería de viajes es una fuente constante de inspiración."
             },
             {
@@ -176,6 +189,7 @@ const data= {
                 idPost: 4,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "¿Qué cámara utilizaste para tomar estas fotos? La calidad es impresionante."
             },
             {
@@ -183,6 +197,7 @@ const data= {
                 idPost: 4,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "La naturalidad en tus fotos de viajes es lo que más me gusta."
             },
             {
@@ -190,6 +205,7 @@ const data= {
                 idPost: 4,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Tu pasión por explorar el mundo es realmente contagiosa."
             }]
         },
@@ -205,6 +221,7 @@ const data= {
                 idPost: 5,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "Cada viaje es una lección de vida. ¿Qué has aprendido en este?"
             },
             {
@@ -212,6 +229,7 @@ const data= {
                 idPost: 5,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Sigo esperando el día en que pueda visitar este lugar hermoso."
             },
             {
@@ -219,6 +237,7 @@ const data= {
                 idPost: 5,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "¡Me estás haciendo desear tomar un vuelo ahora mismo!"
             },
             {
@@ -226,6 +245,7 @@ const data= {
                 idPost: 5,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "Gracias por recordarnos que el mundo es un lugar hermoso que vale la pena explorar."
             }]
         },
@@ -241,6 +261,7 @@ const data= {
                 idPost: 6,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
             },
             {
@@ -248,6 +269,7 @@ const data= {
                 idPost: 6,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "Qué maravillosa experiencia de viaje. ¿Quién más se siente tentado a empacar sus maletas y unirse a esta aventura?"
             },
             {
@@ -255,6 +277,7 @@ const data= {
                 idPost: 6,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "Los viajes son una fuente inagotable de aprendizaje y crecimiento personal."
             },
             {
@@ -262,6 +285,7 @@ const data= {
                 idPost: 6,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "¡Qué envidia de ese lugar! ¿Cómo llegaste allí?"
             }]
         },
@@ -277,6 +301,7 @@ const data= {
                 idPost: 7,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "¡Qué paisaje tan espectacular! Seguro que lo pasaste genial."
             },
             {
@@ -284,6 +309,7 @@ const data= {
                 idPost: 7,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Esto me da ganas de planear mi próximo viaje. ¡Gracias por la inspiración!"
             },
             {
@@ -291,6 +317,7 @@ const data= {
                 idPost: 7,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "¡Estás viviendo la vida al máximo! "
             },
             {
@@ -298,6 +325,7 @@ const data= {
                 idPost: 7,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "¿Algún consejo para quienes quieren visitar ese lugar?"
             }]
         },
@@ -313,6 +341,7 @@ const data= {
                 idPost: 8,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "¡Qué vista increíble! ¿Es tan hermoso como parece en la foto?"
             },
             {
@@ -320,6 +349,7 @@ const data= {
                 idPost: 8,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
+                fotoPerfil: '/img/gonzalo.png',
                 textoComment: "¡Deseando estar allí ahora mismo! "
             },
             {
@@ -327,6 +357,7 @@ const data= {
                 idPost: 8,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Me encantaría saber más sobre tu experiencia en este viaje."
             },
             {
@@ -334,6 +365,7 @@ const data= {
                 idPost: 8,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "¿Cuál fue tu parte favorita de este viaje?"
             }]
         },
@@ -349,6 +381,7 @@ const data= {
                 idPost: 9,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Estás haciendo que todos queramos viajar contigo. "
             },
             {
@@ -356,6 +389,7 @@ const data= {
                 idPost: 9,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "Increíble foto, ¡debe haber sido una experiencia inolvidable!"
             },
             {
@@ -363,6 +397,7 @@ const data= {
                 idPost: 9,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "¿Algún momento destacado que quieras compartir con nosotros?"
             },
             {
@@ -370,6 +405,7 @@ const data= {
                 idPost: 9,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "Este lugar está definitivamente en mi lista de deseos de viaje ahora."
             }]
         },
@@ -385,6 +421,7 @@ const data= {
                 idPost: 10,
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
+                fotoPerfil: '/img/maria.png',
                 textoComment: "¡Qué aventura tan emocionante! ¿Tienes más fotos para compartir?"
             },
             {
@@ -392,6 +429,7 @@ const data= {
                 idPost: 10,
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
+                fotoPerfil: '/img/carlos.png',
                 textoComment: "Esa puesta de sol es de ensueño. "
             },
             {
@@ -399,6 +437,7 @@ const data= {
                 idPost: 10,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
+                fotoPerfil: '/img/paula.png',
                 textoComment: "¿Algún consejo sobre lugares para comer o cosas que hacer allí?"
             },
             {
@@ -406,6 +445,7 @@ const data= {
                 idPost: 10,
                 idUsuario: 1,
                 nombre: "Juan Holder",
+                fotoPerfil: '/img/juan.png',
                 textoComment: "¡Qué maravilloso destino! ¿Cuánto tiempo estuviste allí?"
             }]
         },

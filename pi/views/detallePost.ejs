@@ -12,8 +12,8 @@
                         <% if (i+1==idPost) { %>
                             <section class="center main-content post">
                                 <div class="info-usuario">
-                                    <img class="profile" src="<%= usuario[i].fotoPerfil %>" alt=""> <!-- le agregamos la clase profile -->
-                                    <p><a href="/usuarios/detalleUsuario/id/<%= usuario[i].id %>"><%= usuario[i].email %></a></p>
+                                    <img class="profile" src="<%= posteos[i].fotoPerfil %>" alt=""> <!-- le agregamos la clase profile -->
+                                    <p><a href="/usuarios/detalleUsuario/id/<%= posteos[i].idUsuario %>"><%= posteos[i].nombreUsuario %></a></p>
                                 </div>
                                 <img class="photo" src="<%= posteos[i].nombreImg %>" alt="">
                             </section>
@@ -25,14 +25,15 @@
                                         <button type="submit">Comentar</button>
                                     </form>
                                     <div>
+                                        <% for( let j=0; j < posteos[i].comentarios.length; j++ ) { %>
                                         <article class="comment">
-                                            <img src="https://via.placeholder.com/40" alt="">
+                                            <img class = "profile" src="<%= posteos[i].comentarios[j].fotoPerfil %>" alt="<%= posteos[i].nombreUsuario %>">
                                             <section class="content">
-                                                <a class="user" href="detalleUsuario.html">Nombre</a>
-                                                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                    elit. Vel aspernatur temporibus maxime voluptas</span>
+                                                <a class="user" href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>"><%= posteos[i].comentarios[j].nombre%></a>
+                                                <span class="text"><%= posteos[i].comentarios[j].textoComment %></span>
                                             </section>
                                         </article>
+                                        <% } %>
                                     </div>
                                 </section>
                             </section>
