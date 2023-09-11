@@ -60,15 +60,13 @@ const data= {
                 idPost: 1,
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
-                textoComment: "Qué lugar tan hermoso, dónde estás??",
-                nombreUsuario: "Juan Holder",
-
+                textoComment: "Qué lugar tan hermoso, dónde estás??"
             },
             {
                 id:2,
                 idPost: 1,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "Quiero ir ahí! Podés recomendarme algún lugar para visitar?"
             },
             {
@@ -105,7 +103,6 @@ const data= {
                 idPost: 2,
                 idUsuario: 4,
                 nombre: "Paula Fernandez",
-                nombreUsuario: "",
                 textoComment: "¡Qué suerte tenés de haber estado ahí! Debe haber sido una experiencia única."
                 
             },
@@ -113,7 +110,7 @@ const data= {
                 id:7,  
                 idPost: 2,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. Es así de lindo en persona?"
             },
             {
@@ -149,14 +146,14 @@ const data= {
                 id:11,  
                 idPost: 3,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Me encanta tu espíritu aventurero, seguí explorando!"
             },
             {
                 id:12,  
                 idPost: 3,
                 idUsuario: 3,
-                nombreUsuario: "Carlos Gonzalez",
+                nombre: "Carlos Gonzalez",
                 textoComment: "Las fotos son impresionantes, deben haber sido momentos inolvidables!"
             }]
         },
@@ -192,7 +189,7 @@ const data= {
                 id:16,  
                 idPost: 4,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Tu pasión por explorar el mundo es realmente contagiosa."
             }]
         },
@@ -207,7 +204,7 @@ const data= {
                 id:17,  
                 idPost: 5,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "Cada viaje es una lección de vida. ¿Qué has aprendido en este?"
             },
             {
@@ -243,14 +240,14 @@ const data= {
                 id:21,  
                 idPost: 6,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
             },
             {
                 id:22,  
                 idPost: 6,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "Qué maravillosa experiencia de viaje. ¿Quién más se siente tentado a empacar sus maletas y unirse a esta aventura?"
             },
             {
@@ -286,14 +283,14 @@ const data= {
                 id:26,  
                 idPost: 7,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Esto me da ganas de planear mi próximo viaje. ¡Gracias por la inspiración!"
             },
             {
                 id:27, 
                 idPost: 7,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "¡Estás viviendo la vida al máximo! "
             },
             {
@@ -329,14 +326,14 @@ const data= {
                 id:31,  
                 idPost: 8,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Me encantaría saber más sobre tu experiencia en este viaje."
             },
             {
                 id:32,  
                 idPost: 8,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "¿Cuál fue tu parte favorita de este viaje?"
             }]
         },
@@ -372,7 +369,7 @@ const data= {
                 id:36, 
                 idPost: 9,
                 idUsuario: 1,
-                nombreUsuario: "Juan Holder",
+                nombre: "Juan Holder",
                 textoComment: "Este lugar está definitivamente en mi lista de deseos de viaje ahora."
             }]
         },
@@ -387,7 +384,7 @@ const data= {
                 id:37,  
                 idPost: 10,
                 idUsuario: 2,
-                nombreUsuario: "Maria Rodriguez",
+                nombre: "Maria Rodriguez",
                 textoComment: "¡Qué aventura tan emocionante! ¿Tienes más fotos para compartir?"
             },
             {

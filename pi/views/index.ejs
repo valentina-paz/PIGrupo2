@@ -37,7 +37,7 @@
                                     <% for( let j=0; j < posteos[i].comentarios.length; j++ ) { %>
                                         <li><a
                                                 href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>">
-                                                <%= posteos[j].comentarios[j].nombreUsuario%>
+                                                <%= posteos[i].comentarios[j].nombre%>
                                             </a>
                                             <span>
                                                 <%= posteos[i].comentarios[j].textoComment %>
