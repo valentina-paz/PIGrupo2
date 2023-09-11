@@ -4,15 +4,20 @@
 <%- include('./partials/head') %>
 
 <body>
-    <%- include('./partials/header') %>
+    <%- include('./partials/headerLog') %>
 
     <main>
         <section class="center main-content">
         <h1>Nuevo Post</h1>
-        <p>Crear el formulario para cargar un nuevo posteo.</p>
+        <form action="/login" method="GET">
+            <label for="nombreImg">URL:</label><input id= "nombreImg" type="text" name="nombreImg" value="" required>
+            <label for="textoPost">Caption:</label><input id="textoPost" type="text" name="textoPost" value="">
+            <button type="submit">Enviar</button>
+        </form>
+
         </section>
     </main>
-
+    
     <%- include('./partials/footer') %>
 
 </body>
