@@ -9,7 +9,13 @@
     <main>
         <section class="center main-content">
         <h1>Regsitrate</h1>
-        <p>Crear el formulario para registrar un nuevo usuario.</p>
+        <form action="/login" method="GET">
+            <label for="emailReg">Email:</label><input id="emailReg" type="email" name="email" value="" required>
+            <label for="pass">Clave:</label><input id= "pass" type="password" name="pass" value="" required>
+            <label for="foto">Foto de perfil:</label><input id="foto" type="text" name="fotoPerfil" value="">
+            <label for="dni">DNI:</label><input id="dni" type="number" name="dni" value="" required>
+            <button type="submit">Enviar</button>
+        </form>
         </section>
     </main>
 
