@@ -295,3 +295,13 @@ main {
     justify-content: space-between;
     width: 100%;
 }
+
+.caption-posteo{
+    display: flex;
+}
+
+.usuario-caption{
+    color: #222;
+    padding-right: 4%;
+    font-size: 100%;
+}

@@ -11,7 +11,8 @@
                     <% for( let i=0; i < posteos.length; i++ ) { %>
                         <article class="post">
                             <div class="info-usuario ">
-                                <img class="profile" src="<%= posteos[i].fotoPerfil %>" alt="<%= posteos[i].nombreUsuario %>">
+                                <img class="profile" src="<%= posteos[i].fotoPerfil %>"
+                                    alt="<%= posteos[i].nombreUsuario %>">
                                 <h4>
                                     <a href="/usuarios/detalleUsuario/id/<%= posteos[i].idUsuario %>">
                                         <%= posteos[i].nombreUsuario %>
@@ -19,9 +20,9 @@
                                 </h4>
                             </div>
                             <div class="post-body">
-                                        <a href="/posts/detalle/id/<%= posteos[i].id %>">
-                                            <img src="<%= posteos[i].nombreImg %>" alt="">
-                                        </a>
+                                <a href="/posts/detalle/id/<%= posteos[i].id %>">
+                                    <img src="<%= posteos[i].nombreImg %>" alt="">
+                                </a>
                             </div>
                             <ul class="post-reacciones">
                                 <li>
@@ -32,7 +33,15 @@
                                 </li>
                             </ul>
                             <div class="post-comentarios">
-                                <p><%= posteos[i].nombreUsuario %> <%= posteos[i].textoPost %></p>
+                                <span class="caption-posteo">
+                                    <h3 class="usuario-caption">
+                                        <%= posteos[i].nombreUsuario %>
+                                    </h3>
+                                    <p>
+                                        <%= posteos[i].textoPost %>
+                                    </p>
+                                </span>
+
                                 <h4>Comentarios</h4>
                                 <ul>
                                     <% for( let j=0; j < 2; j++ ) { %>
@@ -45,8 +54,8 @@
                                             </span>
                                         </li>
                                         <% } %>
-                                        <a href="/posts/detalle/id/<%= posteos[i].id %>">Ver
-                                            más...</a>
+                                            <a href="/posts/detalle/id/<%= posteos[i].id %>">Ver
+                                                más...</a>
                                 </ul>
                             </div>
                         </article>
