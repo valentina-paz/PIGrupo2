@@ -11,7 +11,8 @@ li{
 }
 a {
     text-decoration: none;
-    color: #222
+    color: white;
+    font-weight: bold;
 }
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,6 +39,7 @@ header {
 
     padding: 10px 10px;
     border-bottom: 1px solid #ddd;
+    background-color: #181F25;
 }
 
 .logo{
@@ -100,6 +102,11 @@ main {
 .post-body img {
     width: 100%;
 }
+
+.posteo-body{
+    color: #181F25;
+}
+
 .info-usuario,
 .post-reacciones,
 .post-comentarios {
@@ -111,6 +118,7 @@ main {
     flex-direction: row;
     justify-content:flex-start;
     align-items: center;
+    background-color: #181F25;
 }
 .info-usuario img {
     margin-right: 10px;
@@ -118,11 +126,17 @@ main {
     padding: 1px;
     border: 2px solid chocolate;
 }
+
+.info-usuario-color{
+    background-color: #fafafa;
+}
+
 .post-reacciones {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #181F25;
 }
 .post-reacciones li{
     margin-right: 10px;
@@ -133,7 +147,7 @@ main {
 }
 .post-comentarios li a {
     margin-right: 10px;
-    color: #000;
+    color: white;
 }
 .post-comentarios h4 {
     margin: 0 0 10px 0;
@@ -207,6 +221,11 @@ main {
 .comment .content {
     line-height: 1;
 }
+
+.comment .content a{
+    color: black;
+}
+
 .comment-form{
     background: #fff;
     padding: 15px 5px 10px;
@@ -233,6 +252,16 @@ main {
     cursor: pointer;
     background-color: forestgreen;
 }
+
+.fa-heart{
+    color: red;
+}
+
+.post-comentarios{
+    color: white;
+    background-color: #181F25;
+}
+
 /* User detail */
 
 .user-detail{
@@ -301,7 +330,8 @@ main {
 }
 
 .usuario-caption{
-    color: #222;
+    color: white;
     padding-right: 4%;
     font-size: 100%;
 }
+
