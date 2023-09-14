@@ -335,3 +335,26 @@ main {
     font-size: 100%;
 }
 
+/* Register */
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: #181F25;
+
+}
+
+.form button{
+    padding: 5px 0;
+    background-color:mediumseagreen;
+    border: 1px solid mediumaquamarine;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10%;
+    width: 85%;
+    align-self: center;
+}
+
+.fondo-form{
+    width: 60%;
+}
+
