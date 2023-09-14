@@ -118,7 +118,7 @@ const data= {
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
                 fotoPerfil: '/img/maria.png',
-                textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. Es así de lindo en persona?"
+                textoComment: "Estoy enamorada de este lugar gracias a tus fotos. Es así de lindo en persona?"
             },
             {
                 id:8,  
@@ -262,7 +262,7 @@ const data= {
                 idUsuario: 1,
                 nombre: "Juan Holder",
                 fotoPerfil: '/img/juan.png',
-                textoComment: "Estoy enamorado/a de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
+                textoComment: "Estoy enamorado de este lugar gracias a tus fotos. ¿Es tan hermoso en persona como parece?"
             },
             {
                 id:22,  
@@ -270,7 +270,7 @@ const data= {
                 idUsuario: 2,
                 nombre: "Maria Rodriguez",
                 fotoPerfil: '/img/maria.png',
-                textoComment: "Qué maravillosa experiencia de viaje. ¿Quién más se siente tentado a empacar sus maletas y unirse a esta aventura?"
+                textoComment: "Qué maravillosa experiencia de viaje. ¿Quién más se siente tentado a preparar sus valijas y unirse a esta aventura?"
             },
             {
                 id:23,  
@@ -350,7 +350,7 @@ const data= {
                 idUsuario: 5,
                 nombre: "Gonzalo Perez",
                 fotoPerfil: '/img/gonzalo.png',
-                textoComment: "¡Deseando estar allí ahora mismo! "
+                textoComment: "¡Deseando estar allí ahora mismo!"
             },
             {
                 id:31,  
@@ -382,7 +382,7 @@ const data= {
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
                 fotoPerfil: '/img/carlos.png',
-                textoComment: "Estás haciendo que todos queramos viajar contigo. "
+                textoComment: "Estás haciendo que todos queramos viajar con vos."
             },
             {
                 id:34,  
@@ -430,7 +430,7 @@ const data= {
                 idUsuario: 3,
                 nombre: "Carlos Gonzalez",
                 fotoPerfil: '/img/carlos.png',
-                textoComment: "Esa puesta de sol es de ensueño. "
+                textoComment: "Esa puesta de sol es de ensueño."
             },
             {
                 id:39,  
