@@ -253,7 +253,7 @@ const data= {
             id:6,
             idUsuario: 3,
             nombreUsuario: "Carlos Gonzalez",
-            nombreImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88yDNltUzMGdsh58ayNBSW4qLS6HcaydGTxFqffj0wpPIZkUlv1P1Ii_hfpNyuobv6io&usqp=CAU",
+            nombreImg: "https://i.pinimg.com/564x/4f/af/59/4faf599573517421e927355090f317c5.jpg",
             textoPost:"Cada lugar tiene una historia, estoy aquí para escucharlas.",
             fotoPerfil: '/img/carlos.png',
             comentarios: [{
