@@ -15,10 +15,6 @@ CREATE TABLE usuarios (
     updatedAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt  TIMESTAMP NULL
 );
-USE dbPI;
-
-INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
-VALUES (DEFAULT,'Juan Holder','juan.holder@gmail.com','Password123','/img/juan.png','1987-05-15',32123456);
 
 CREATE TABLE posteos(
 	 id  INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -44,3 +40,15 @@ CREATE TABLE comentarios(
      FOREIGN KEY (idPost) REFERENCES posteos(id),
      FOREIGN KEY (idUsuario) REFERENCES usuarios(id)
 );
+
+
+INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
+VALUES (DEFAULT,'Juan Holder','juan.holder@gmail.com','Password123','/img/juan.png','1987-05-15',32123456);
+INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
+VALUES (DEFAULT,'Maria Rodriguez','maria.rodriguez@gmail.com','SecurePass!23','/img/maria.png','1999-09-20',28987654);
+INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
+VALUES (DEFAULT,'Carlos Gonzalez','carlos.gonzalez@gmail.com','Password456','/img/carlos.png','1985-12-03',35789123);
+INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
+VALUES (DEFAULT,'Paula Fernandez','paula.fernandez@gmail.com','SecurePass123','/img/paula.png','1992-11-10',29876543);
+INSERT INTO usuarios (id,nombre,email,pass,fotoPerfil,fecha,dni)
+VALUES (DEFAULT,'Gonzalo Perez','gonzalo.perez@gmail.com','Pass123word','/img/gonzalo.png','1989-06-27',26345678);

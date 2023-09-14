@@ -43,7 +43,7 @@ const data= {
             pass: 'Pass123word' ,
             fotoPerfil: '/img/gonzalo.png',
             fecha: '27/06/1989',
-            dni: ' 26345678'
+            dni: '26345678'
         },
         
     ],
