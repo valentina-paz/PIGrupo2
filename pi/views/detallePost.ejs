@@ -8,7 +8,10 @@
 
             <main>
                 <div class="post-detail container">
-                    <% for( let i=0; i < posteos.length; i++ ) { %>
+                    <% if (idPost>10) { %>
+                        <h2 class="sin-resultados">No hay resultados para ese id. Por favor elija otro</h2>
+                    <% } else{ %>
+                        <% for( let i=0; i < posteos.length; i++ ) { %>
                         <% if (i+1==idPost) { %>
                             <section class="center main-content post">
                                 <div class="info-usuario">
@@ -18,7 +21,7 @@
                                 <img class="photo" src="<%= posteos[i].nombreImg %>" alt="">
                             </section>
                             <section class="right">
-                                <h4>Comentarios</h4>
+                                <h4 class="titulo-form">Comentarios</h4>
                                 <section class="comments">
                                     <form action="" class="comment-form">
                                         <input type="text" class="input" placeholder="Agregar comentario">
@@ -39,6 +42,7 @@
                             </section>
                             <% } %>
                                 <% } %>
+                    <% }%>
 
                 </div>
             </main>

@@ -36,7 +36,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     padding: 10px 10px;
     border-bottom: 1px solid #ddd;
     background-color: #181F25;
@@ -45,6 +44,7 @@ header {
 .logo{
     font-size: 18px;
 }
+
 .search {
     background-color: #EBEDF0;
     padding: 10px;
@@ -78,17 +78,29 @@ header {
 
 /* Main */
 main {
-    background-color: #fafafa;
+    background-color: #27313b;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     padding: 100px 0;
-    min-height: 600px;
+    min-height: 700px;
 }
 
 .main-content {
     max-width: 470px;
+}
+
+.main-mi-perfil{
+    padding: 1px 0;
+    min-height: 100px;
+    padding-bottom: 60px;
+}
+
+.main-mi-perfil-usuario{
+    min-height: 50px;
+    padding-top: 100px;
+    padding-bottom: 0px;
 }
 
 /* post */
@@ -120,6 +132,7 @@ main {
     align-items: center;
     background-color: #181F25;
 }
+
 .info-usuario img {
     margin-right: 10px;
     border-radius: 90%;
@@ -128,7 +141,8 @@ main {
 }
 
 .info-usuario-color{
-    background-color: #fafafa;
+    background-color: #27313b;
+    color: white;
 }
 
 .post-reacciones {
@@ -168,9 +182,10 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #fff;
+    background: #27313b;
     border-top: 1px solid #ddd;
     padding: 20px 10px;
+    color: white;
 }
 .social li {
     margin-right: 20px;
@@ -193,6 +208,11 @@ main {
 .post-detail .photo {
     width: 100%;
 }
+
+.mi-perfil-content{
+    width: 300px;
+}
+
 .post-detail .right {
     width: 34%;
 }
@@ -216,14 +236,14 @@ main {
 }
 .comment .text {
     font-size: 12px;
-    color: #777;
+    color: white;
 }
 .comment .content {
     line-height: 1;
 }
 
 .comment .content a{
-    color: black;
+    color: white;
 }
 
 .comment-form{
@@ -260,6 +280,10 @@ main {
 .post-comentarios{
     color: white;
     background-color: #181F25;
+}
+
+.sin-resultados{
+    color: white;
 }
 
 /* User detail */
@@ -341,6 +365,7 @@ main {
     flex-direction: column;
     background-color: #181F25;
     padding: 10%;
+    color: white;
 }
 
 .form button{
@@ -356,4 +381,8 @@ main {
 
 .fondo-form{
     width: 60%;
+}
+
+.titulo-form{
+    color: white;
 }

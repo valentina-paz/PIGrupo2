@@ -7,6 +7,9 @@
         <%- include('./partials/header') %>
 
             <main>
+                <% if (idUsuario>5) { %>
+                    <h2 class="sin-resultados">No hay resultados para ese id. Por favor elija otro</h2>
+                <% } else {%>
                 <div class="user-detail container">
                     <% for( let i=0; i < usuario.length; i++ ) { %>
                         <% if (i+1==idUsuario) { %>
@@ -37,8 +40,8 @@
                             </section>
                             <% } %>
                                 <% } %>
-
-                </div>
+                </div> 
+                <% } %>
             </main>
 
             <%- include('./partials/footer') %>
