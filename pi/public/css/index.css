@@ -340,7 +340,7 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #181F25;
-
+    padding: 10%;
 }
 
 .form button{
@@ -357,4 +357,3 @@ main {
 .fondo-form{
     width: 60%;
 }
-
