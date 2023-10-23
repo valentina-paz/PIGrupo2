@@ -8,20 +8,20 @@
 
             <main>
                 <section class="center main-content">
-                    <% for( let i=0; i < posteos.length; i++ ) { %>
+                    <% for( let i=0; i < data.length; i++ ) { %>
                         <article class="post">
                             <div class="info-usuario ">
-                                <img class="profile" src="<%= posteos[i].fotoPerfil %>"
-                                    alt="<%= posteos[i].nombreUsuario %>">
+                                <img class="profile" src="<%= data[i].fotoPerfil %>"
+                                    alt="<%= data[i].nombreUsuario %>">
                                 <h4>
-                                    <a href="/usuarios/detalleUsuario/id/<%= posteos[i].idUsuario %>">
-                                        <%= posteos[i].nombreUsuario %>
+                                    <a href="/usuarios/detalleUsuario/id/<%= data[i].idUsuario %>">
+                                        <%= data[i].nombreUsuario %>
                                     </a>
                                 </h4>
                             </div>
                             <div class="post-body">
-                                <a href="/posts/detalle/id/<%= posteos[i].id %>">
-                                    <img src="<%= posteos[i].nombreImg %>" alt="">
+                                <a href="/posts/detalle/id/<%= data[i].id %>">
+                                    <img src="<%= data[i].nombreImg %>" alt="">
                                 </a>
                             </div>
                             <ul class="post-reacciones">
@@ -35,10 +35,10 @@
                             <div class="post-comentarios">
                                 <span class="caption-posteo">
                                     <h3 class="usuario-caption">
-                                        <%= posteos[i].nombreUsuario %>
+                                        <%= data[i].nombreUsuario %>
                                     </h3>
                                     <p>
-                                        <%= posteos[i].textoPost %>
+                                        <%= data[i].textoPost %>
                                     </p>
                                 </span>
 
@@ -46,15 +46,15 @@
                                 <ul>
                                     <% for( let j=0; j < 2; j++ ) { %>
                                         <li><a
-                                                href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>">
-                                                <%= posteos[i].comentarios[j].nombre%>
+                                                href="/usuarios/detalleUsuario/id/<%= data[i].comentarios[j].idUsuario %>">
+                                                <%= data[i].comentarios[j].nombre%>
                                             </a>
                                             <span>
-                                                <%= posteos[i].comentarios[j].textoComment %>
+                                                <%= data[i].comentarios[j].textoComment %>
                                             </span>
                                         </li>
                                         <% } %>
-                                            <a href="/posts/detalle/id/<%= posteos[i].id %>">Ver
+                                            <a href="/posts/detalle/id/<%= data[i].id %>">Ver
                                                 más...</a>
                                 </ul>
                             </div>
