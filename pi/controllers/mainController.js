@@ -12,8 +12,8 @@ const mainController = {
     };
     posts.findAll(relacion)
     .then(function(result){
-      res.send(result)
-      // res.render('index', { data: result });
+          // res.send(result)
+      res.render('index', { data: result });
     })
     .catch(function(error){
       res.send(error)
