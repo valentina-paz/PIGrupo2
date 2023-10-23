@@ -11,10 +11,10 @@
                     <% for( let i=0; i < data.length; i++ ) { %>
                         <article class="post">
                             <div class="info-usuario ">
-                                <img class="profile" src="<%= data[i].fotoPerfil %>"
-                                    alt="<%= data[i].nombreUsuario %>">
+                                <img class="profile" src="<%= data[i].posteoUsuario.fotoPerfil %>"
+                                    alt="<%= data[i].posteoUsuario.nombre %>">
                                 <h4>
-                                    <a href="/usuarios/detalleUsuario/id/<%= data[i].idUsuario %>">
+                                    <a href="/usuarios/detalleUsuario/id/<%= data[i].posteoUsuario.id %>">
                                         <%= data[i].nombreUsuario %>
                                     </a>
                                 </h4>
