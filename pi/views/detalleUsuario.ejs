@@ -5,19 +5,17 @@
 
     <body>
         <%- include('./partials/header') %>
-
+            <!--idUsuario: id, usuario: result, posteos: result.usuarioPosteo -->
             <main>
                 <% if (idUsuario>5) { %>
-                    <h2 class="sin-resultados">No hay resultados para ese id. Por favor elija otro</h2>
-                <% } else {%>
-                <div class="user-detail container">
-                    <% for( let i=0; i < usuario.length; i++ ) { %>
-                        <% if (i+1==idUsuario) { %>
+                    <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
+                    <% } else {%>
+                        <div class="user-detail container">
                             <section class="top main-content">
-                                <img class="profile" src="<%= usuario[i].fotoPerfil %>" alt="">
+                                <img class="profile" src="<%= usuario.fotoPerfil %>" alt="Foto de perfil">
                                 <div class="info-usuario info-usuario-color">
                                     <p>
-                                        <%= usuario[i].nombre %>
+                                        <%= usuario.nombre %>
                                     </p>
                                     <a class="follow" href="">seguir</a>
                                     <ul class="meta">
@@ -28,20 +26,16 @@
                                 </div>
                             </section>
                             <section class="bottom">
-                                <% for( let j=0; j < posteos.length; j++ ) { %>
-                                    <% if (posteos[j].idUsuario==idUsuario) { %>
+                                <% for( let i=0; i < posteos.length; i++ ) { %>
                                         <article class="post">
-                                            <a href="/posts/detalle/id/<%= posteos[j].id %>">
-                                                <img src="<%= posteos[j].nombreImg %>" alt="">
+                                            <a href="/posts/detalle/id/<%= posteos[i].id %>">
+                                                <img src="<%= posteos[i].nombreImg %>" alt="Posteo">
                                             </a>
                                         </article>
-                                        <% } %>
                                             <% } %>
                             </section>
-                            <% } %>
-                                <% } %>
-                </div> 
-                <% } %>
+                        </div>
+                        <% } %>
             </main>
 
             <%- include('./partials/footer') %>

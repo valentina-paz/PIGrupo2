@@ -5,35 +5,32 @@
 
     <body>
         <%- include('./partials/header') %>
-
             <main>
                 <div class="post-detail container">
                     <% if (idPost>10) { %>
-                        <h2 class="sin-resultados">No hay resultados para ese id. Por favor elija otro</h2>
+                        <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
                     <% } else{ %>
-                        <% for( let i=0; i < posteos.length; i++ ) { %>
-                        <% if (i+1==idPost) { %>
                             <section class="center main-content post">
                                 <div class="info-usuario">
-                                    <img class="profile" src="<%= posteos[i].fotoPerfil %>" alt=""> <!-- le agregamos la clase profile -->
-                                    <p><a href="/usuarios/detalleUsuario/id/<%= posteos[i].idUsuario %>"><%= posteos[i].nombreUsuario %></a></p>
+                                    <img class="profile" src="<%= usuario.fotoPerfil %>" alt="Foto de perfil"> 
+                                    <p><a href="/usuarios/detalleUsuario/id/<%= usuario.id %>"><%= usuario.nombre %></a></p>
                                 </div>
-                                <img class="photo" src="<%= posteos[i].nombreImg %>" alt="">
+                                <img class="photo" src="<%= posteo.nombreImg %>" alt="Foto del posteo">
                             </section>
                             <section class="right">
                                 <h4 class="titulo-form">Comentarios</h4>
                                 <section class="comments">
-                                    <form action="" class="comment-form">
+       <!--form sin action ni method--> <form action="" class="comment-form">
                                         <input type="text" class="input" placeholder="Agregar comentario">
                                         <button type="submit">Comentar</button>
                                     </form>
                                     <div>
-                                        <% for( let j=0; j < posteos[i].comentarios.length; j++ ) { %>
+                                        <% for( let i=0; i < posteo.posteoComentario.length; i++ ) { %>
                                         <article class="comment">
-                                            <img class = "profile" src="<%= posteos[i].comentarios[j].fotoPerfil %>" alt="<%= posteos[i].nombreUsuario %>">
+                                            <img class = "profile" src="<%= posteo.posteoComentario[i].comentarioUsuario.fotoPerfil %>" alt="<%= posteo.posteoComentario[i].comentarioUsuario.nombre %>">
                                             <section class="content">
-                                                <a class="user" href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>"><%= posteos[i].comentarios[j].nombre%></a>
-                                                <span class="text"><%= posteos[i].comentarios[j].textoComment %></span>
+                                                <a class="user" href="/usuarios/detalleUsuario/id/<%= posteo.posteoComentario[i].comentarioUsuario.id %>"><%= posteo.posteoComentario[i].comentarioUsuario.nombre%></a>
+                                                <span class="text"><%= posteo.posteoComentario[i].textoComment %></span>
                                             </section>
                                         </article>
                                         <% } %>
@@ -41,9 +38,6 @@
                                 </section>
                             </section>
                             <% } %>
-                                <% } %>
-                    <% }%>
-
                 </div>
             </main>
 

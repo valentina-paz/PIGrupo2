@@ -21,7 +21,7 @@
                             </div>
                             <div class="post-body">
                                 <a href="/posts/detalle/id/<%= data[i].id %>">
-                                    <img src="<%= data[i].nombreImg %>" alt="">
+                                    <img src="<%= data[i].nombreImg %>" alt="Posteo">
                                 </a>
                             </div>
                             <ul class="post-reacciones">
@@ -46,8 +46,8 @@
                                 <ul>
                                     <% for( let j=0; j < 2; j++ ) { %>
                                         <li><a
-                                                href="/usuarios/detalleUsuario/id/<%= data[i].posteoUsuario.comentarios[j].idUsuario %>">
-                                                <%= data[i].posteoUsuario.comentarios[j].nombre%>
+                                                href="/usuarios/detalleUsuario/id/<%= data[i].posteoComentario[j].comentarioUsuario.id %>">
+                                                <%= data[i].posteoComentario[j].comentarioUsuario.nombre%>
                                             </a>
                                             <span>
                                                 <%= data[i].posteoUsuario.comentarios[j].textoComment %>

@@ -1,10 +1,25 @@
 const data= require("../database/models");
+let posts= data.Posteo;
 
 const postsController ={
     detalle: function(req, res, next) {
       let id= req.params.id;
-        res.render('detallePost', { idPost: id, usuario: data.usuarios, posteos: data.posteos});
+      let relacion = {
+        include: {
+          all: true,
+          nested: true
+        }
+      };
+      posts.findByPk(id, relacion)
+      .then(function(result){
+        // res.send(result)
+        res.render('detallePost', { idPost: id, usuario: result.posteoUsuario, posteo: result});
+      })
+      .catch(function(error){
+        res.send(error)
+      })
       },
+
     agregarPost: function(req, res, next) {
         res.render('agregarPost', { title: 'Express' });
       }
