@@ -3,10 +3,10 @@ let usuarios= data.Usuario;
 
 const usuariosController = {
     miPerfil: function(req, res, next) {
-        res.render('miPerfil', { usuario: data.usuarios, posteos: data.posteos });
+        return res.render('miPerfil', { usuario: data.usuarios, posteos: data.posteos });
     },
     editarPerfil: function(req, res, next) {
-        res.render('editarPerfil', { title: 'Express' });
+        return res.render('editarPerfil', { title: 'Express' });
     },
     detalleUsuario: function(req, res, next) {
         let id= req.params.id
@@ -19,10 +19,10 @@ const usuariosController = {
         usuarios.findByPk(id, relacion)
         .then(function(result){
             // res.send(result)
-            res.render('detalleUsuario', { idUsuario: id, usuario: result, posteos: result.usuarioPosteo });
+            return res.render('detalleUsuario', { idUsuario: id, usuario: result, posteos: result.usuarioPosteo });
         })
         .catch(function(error){
-            res.send(error)
+            return res.send(error)
         })
     }
 };

@@ -13,15 +13,15 @@ const postsController ={
       posts.findByPk(id, relacion)
       .then(function(result){
         // res.send(result)
-        res.render('detallePost', { idPost: id, usuario: result.posteoUsuario, posteo: result});
+        return res.render('detallePost', { idPost: id, usuario: result.posteoUsuario, posteo: result});
       })
       .catch(function(error){
-        res.send(error)
+        return res.send(error)
       })
       },
 
     agregarPost: function(req, res, next) {
-        res.render('agregarPost', { title: 'Express' });
+      return res.render('agregarPost', { title: 'Express' });
       }
 };
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */
