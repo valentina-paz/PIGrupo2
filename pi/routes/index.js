@@ -8,6 +8,8 @@ router.get('/', mainController.index);
 
 router.get('/login', mainController.login);
 
+router.post('/login', mainController.loginPost);
+
 router.get('/registracion', mainController.register);
 
 router.get('/busqueda', mainController.busqueda);
