@@ -37,10 +37,10 @@ const mainController = {
     usuarios.findOne (criterio)
     .then(function (result) {
       if (result != null) {
-        let check = bcrypt.compareSync (pass,result.password)
+        let check = bcrypt.compareSync(pass,result.password)
 
         if (check) {
-          // req.session.user = result.dataValues;
+          req.session.user = result.dataValues;
           if (rememberMe != undefined) {
             res.cookie('userId',result.id,{maxAge:1000 * 60 * 5})
           }
@@ -59,8 +59,13 @@ const mainController = {
   },
 
   register: function (req, res, next) {
-    return res.render('registracion', { title: 'Express' });
+    return res.render('registracion');
   },
+
+  registerPost: function (req, res, next) {
+    //escribir register post en el repo como store. CAMBIAR 
+   return res.render('login')}, 
+
   busqueda: function (req, res, next) {
     let id = req.params.id
     return res.render('index', { usuario: data.usuarios, idUsuario: id, posteos: data.posteos });
