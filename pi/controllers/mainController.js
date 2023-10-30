@@ -3,6 +3,7 @@ const posts= data.Posteo;
 const usuarios= data.Usuario;
 const bcrypt = require('bcryptjs');
 
+
 const mainController = {
   index: function (req, res, next) {
     let id = req.params.id
@@ -39,6 +40,10 @@ const mainController = {
         let check = bcrypt.compareSync (pass,result.password)
 
         if (check) {
+          // req.session.user = result.dataValues;
+          if (rememberMe != undefined) {
+            res.cookie('userId',result.id,{maxAge:1000 * 60 * 5})
+          }
           return res.redirect('/')
         }
         else {
