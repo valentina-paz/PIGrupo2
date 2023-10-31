@@ -47,7 +47,7 @@ const mainController = {
           return res.redirect('/')
         }
         else {
-          return res.render ('/login')
+          return res.render ('login')
         }
 
       } else {
