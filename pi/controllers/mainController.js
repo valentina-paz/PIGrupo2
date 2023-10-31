@@ -53,6 +53,7 @@ const mainController = {
       } else {
         return res.send ('No existe el mail ' + emailBuscado)
       }
+      
     }) . catch (function (error) {
         return res.send (error);
     });
@@ -63,8 +64,25 @@ const mainController = {
   },
 
   registerPost: function (req, res, next) {
-    //escribir register post en el repo como store. CAMBIAR 
-   return res.render('login')}, 
+    let infoForm = req.body;
+    let user = {
+      //los nombres de las prop tienen q ser = a nombre de la columna
+      nombre: infoForm.nombre,
+      email: infoForm.email,
+      pass: bcrypt.hashSync(infoForm.pass,10),
+      fotoPerfil: infoForm.fotoPerfil,
+      fechaNacimiento: infoForm.fecha,
+      dni: infoForm.dni,
+      rembember_token: 'false'
+    }
+    usuarios.create(user)
+    .then(function (result) {
+      return res.redirect('/login');
+    })
+    .catch(function(error) {
+      return res.send(error)
+    });
+  }, 
 
   busqueda: function (req, res, next) {
     let id = req.params.id

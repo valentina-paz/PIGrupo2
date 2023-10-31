@@ -9,9 +9,16 @@
     <main class="main-mi-perfil-usuario">
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="/img/juan.png" alt="">
+                <img class="profile" src="/img/juan.png" alt="foto de perfil">
                 <div class="info-usuario info-usuario-color">
-                    <p><%= usuario[0].nombre %></p> 
+<!-- name: infoForm.nombre,
+     email: infoForm.email,
+      pass: bcrypt.hashSync(infoForm.pass,10),
+      fotoPerfil: infoForm.fotoPerfil,
+      fechaNacimiento: infoForm.fecha,
+      dni: infoForm.dni,
+      rembember_token: 'false'-->
+                    <p><%=locals.user.name%></p> 
                     <a class="follow" href="/usuarios/editarMiPerfil/id/<%= usuario[0].id %>"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
                         <li>100 post</li>
@@ -37,7 +44,7 @@
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/id/<%= posteos[i].id %>">
-                            <img src="<%= posteos[i].nombreImg %>" alt="">
+                            <img src="<%= posteos[i].nombreImg %>" alt="posteo">
                         </a>
                     </div>
                     <ul class="post-reacciones">
