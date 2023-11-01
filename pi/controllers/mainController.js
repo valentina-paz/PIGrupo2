@@ -29,7 +29,7 @@ const mainController = {
 
   loginPost: function (req,res,next) {
     let emailBuscado = req.body.email;
-    let pass = req.body.password;
+    let pass = req.body.pass;
     let criterio = {
       where: [{email: emailBuscado}]
     };
@@ -37,24 +37,18 @@ const mainController = {
     usuarios.findOne (criterio)
     .then(function (result) {
       if (result != null) {
-        let check = bcrypt.compareSync(pass,result.password)
-
+       let check = bcrypt.compareSync(pass,result.pass)
         if (check) {
           req.session.user = result.dataValues;
-          if (rememberMe != undefined) {
-            res.cookie('userId',result.id,{maxAge:1000 * 60 * 5})
-          }
-          return res.redirect('/')
-        }
+          // if (rememberMe != undefined) {
+          //   res.cookie('userId',result.id,{maxAge:1000 * 60 * 5})
+          return res.redirect('/')} 
         else {
           return res.render ('login')
-        }
-
-      } else {
+        }} else {
         return res.send ('No existe el mail ' + emailBuscado)
-      }
-      
-    }) . catch (function (error) {
+       }
+    }). catch (function (error) {
         return res.send (error);
     });
   },
