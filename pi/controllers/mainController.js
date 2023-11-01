@@ -83,10 +83,22 @@ const mainController = {
       });
   },
 
-  busqueda: function (req, res, next) {
-    let id = req.params.id
-    return res.render('index', { usuario: data.usuarios, idUsuario: id, posteos: data.posteos });
-  }
+  busqueda: function(req, res) {
+    let busqueda= req.query.busqueda;
+    let filtro={
+      where:[
+        {nombre: {[op.like]:`%${busqueda}%`}}
+      ]
+    }
+    usuarios.findAll(filtro)
+    .then(function (results) {
+      return res.render("resultadoBusqueda" , {usuarios : results, criterio: busqueda})
+    })
+    .catch(function (error) {
+      res.send(error)
+    })
+
+  },
 };
 
 module.exports = mainController;

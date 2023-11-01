@@ -1,5 +1,7 @@
 const data= require("../database/models");
 let posts= data.Posteo;
+let usuarios= data.Usuario;
+const op= data.Sequelize.Op;
 
 const postsController ={
     detalle: function(req, res, next) {
@@ -21,7 +23,7 @@ const postsController ={
       },
 
     agregarPost: function(req, res, next) {
-      return res.render('agregarPost', { title: 'Express' });
+      return res.render('agregarPost');
       }
 };
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */
