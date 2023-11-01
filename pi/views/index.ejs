@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <%- include('./partials/head') %>
 
     <body>
-        <%- include('./partials/header') %>
-
-            <main>
-                <section class="center main-content">
-                    <% for( let i=0; i < data.length; i++ ) { %>
-                        <article class="post">
-                            <div class="info-usuario ">
-                                <img class="profile" src="<%= data[i].posteoUsuario.fotoPerfil %>"
-                                    alt="<%= data[i].posteoUsuario.nombre %>">
-                                <h4>
-                                    <a href="/usuarios/detalleUsuario/id/<%= data[i].posteoUsuario.id %>">
-                                        <%= data[i].posteoUsuario.nombre %>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div class="post-body">
-                                <a href="/posts/detalle/id/<%= data[i].id %>">
-                                    <img src="<%= data[i].nombreImg %>" alt="Posteo">
-                                </a>
-                            </div>
-                            <ul class="post-reacciones">
-                                <li>
-                                    <i class="fa-regular fa-heart"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-regular fa-comment"></i>
-                                </li>
-                            </ul>
-                            <div class="post-comentarios">
-                                <span class="caption-posteo">
-                                    <h3 class="usuario-caption">
-                                        <%= data[i].posteoUsuario.nombre %>
-                                    </h3>
-                                    <p>
-                                        <%= data[i].textoPost %>
-                                    </p>
-                                </span>
-
-                                <h4>Comentarios</h4>
-                                <ul>
-                                    <% for( let j=0; j < 2; j++ ) { %>
-                                        <li><a
-                                                href="/usuarios/detalleUsuario/id/<%= data[i].posteoComentario[j].comentarioUsuario.id %>">
-                                                <%= data[i].posteoComentario[j].comentarioUsuario.nombre%>
+        <% if (locals.user !=undefined) { %>
+            <%- include('./partials/headerLog') %>
+            <% } else { %>
+                <%- include('./partials/head') %>
+            <% } %>
+                        <main>
+                            <section class="center main-content">
+                                <% for( let i=0; i < data.length; i++ ) { %>
+                                    <article class="post">
+                                        <div class="info-usuario ">
+                                            <img class="profile" src="<%= data[i].posteoUsuario.fotoPerfil %>"
+                                                alt="<%= data[i].posteoUsuario.nombre %>">
+                                            <h4>
+                                                <a href="/usuarios/detalleUsuario/id/<%= data[i].posteoUsuario.id %>">
+                                                    <%= data[i].posteoUsuario.nombre %>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="post-body">
+                                            <a href="/posts/detalle/id/<%= data[i].id %>">
+                                                <img src="<%= data[i].nombreImg %>" alt="Posteo">
                                             </a>
-                                            <span>
-                                                <%= data[i].posteoUsuario.comentarios[j].textoComment %>
+                                        </div>
+                                        <ul class="post-reacciones">
+                                            <li>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa-regular fa-comment"></i>
+                                            </li>
+                                        </ul>
+                                        <div class="post-comentarios">
+                                            <span class="caption-posteo">
+                                                <h3 class="usuario-caption">
+                                                    <%= data[i].posteoUsuario.nombre %>
+                                                </h3>
+                                                <p>
+                                                    <%= data[i].textoPost %>
+                                                </p>
                                             </span>
-                                        </li>
-                                        <% } %>
-                                            <a href="/posts/detalle/id/<%= data[i].id %>">Ver
-                                                más...</a>
-                                </ul>
-                            </div>
-                        </article>
-                        <% } %>
-                </section>
-            </main>
 
-            <%- include('./partials/footer') %>
+                                            <h4>Comentarios</h4>
+                                            <ul>
+                                                <% for( let j=0; j < 2; j++ ) { %>
+                                                    <li><a
+                                                            href="/usuarios/detalleUsuario/id/<%= data[i].posteoComentario[j].comentarioUsuario.id %>">
+                                                            <%= data[i].posteoComentario[j].comentarioUsuario.nombre%>
+                                                        </a>
+                                                        <span>
+                                                            <%= data[i].posteoUsuario.comentarios[j].textoComment %>
+                                                        </span>
+                                                    </li>
+                                                    <% } %>
+                                                        <a href="/posts/detalle/id/<%= data[i].id %>">Ver
+                                                            más...</a>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                            </section>
+                        </main>
+
+                        <%- include('./partials/footer') %>
 
     </body>
 

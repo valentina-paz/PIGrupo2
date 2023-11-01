@@ -18,8 +18,8 @@
       fechaNacimiento: infoForm.fecha,
       dni: infoForm.dni,
       rembember_token: 'false'-->
-                    <p><%=locals.user.name%></p> 
-                    <a class="follow" href="/usuarios/editarMiPerfil/id/<%= usuario[0].id %>"><i class="fa-solid fa-user-gear"></i></a>
+                    <p><%=user.name%></p> 
+                    <a class="follow" href="/usuarios/editarMiPerfil/id/<%= user.id %>"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
                         <li>100 post</li>
                         <li>200 seguidores</li>
