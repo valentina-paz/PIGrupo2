@@ -48,7 +48,8 @@
 
                                             <h4>Comentarios</h4>
                                             <ul>
-                                                <% for( let j=0; j < 2; j++ ) { %>
+                                                 <% for( let j=0; j < 2; j++ ) { %>
+                                                    <% if (data[i].posteoComentario[j] != undefined) { %>
                                                     <li><a
                                                             href="/usuarios/detalleUsuario/id/<%= data[i].posteoComentario[j].comentarioUsuario.id %>">
                                                             <%= data[i].posteoComentario[j].comentarioUsuario.nombre%>
@@ -57,9 +58,12 @@
                                                             <%= data[i].posteoUsuario.comentarios[j].textoComment %>
                                                         </span>
                                                     </li>
-                                                    <% } %>
                                                         <a href="/posts/detalle/id/<%= data[i].id %>">Ver
                                                             más...</a>
+                                                    <% } %>
+                                                        
+                                                <% } %>
+                                                
                                             </ul>
                                         </div>
                                     </article>

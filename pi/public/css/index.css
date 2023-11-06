@@ -387,3 +387,12 @@ main {
 .titulo-form{
     color: white;
 }
+
+.mensaje-error{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+}

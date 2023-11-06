@@ -22,9 +22,23 @@ const postsController ={
       })
       },
 
-    agregarPost: function(req, res, next) {
+    showAgregarPost: function(req, res, next) {
       return res.render('agregarPost');
-      }
+      },
+
+    storeAgregarPost: function (req, res) {
+      let info= req.body;
+      //return res.send(info);
+      info.idUsuario= req.session.user.id
+      posts.create(info)
+      .then(function (result) {
+        // res.send(result)
+        return res.redirect('/')
+      })
+      .catch(function (error) {
+        res.send(error)
+      })
+    }
 };
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */
 module.exports= postsController;

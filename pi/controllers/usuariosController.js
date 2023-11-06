@@ -33,8 +33,8 @@ const usuariosController = {
         };
         usuarios.findByPk(id, relacion)
         .then(function(result){
-            res.send(result)
-            //return res.render('detalleUsuario', { idUsuario: id, usuario: result, posteos: result.usuarioPosteo });
+            //res.send(result)
+            return res.render('detalleUsuario', { idUsuario: id, usuario: result, posteos: result.usuarioPosteo });
         })
         .catch(function(error){
             return res.send(error)

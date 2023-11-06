@@ -13,8 +13,12 @@ const mainController = {
         nested: true
       }
     };
-    posts.findAll(relacion)
+    let criterio={
+      order: ['createdAt', 'DESC']
+    }
+    posts.findAll(relacion, criterio)
       .then(function (result) {
+        // res.send(result)
         return res.render('index', { data: result });
       })
       .catch(function (error) {
@@ -30,6 +34,18 @@ const mainController = {
     let emailBuscado = req.body.email;
     let pass = req.body.pass;
     let rememberMe = req.body.rememberMe;
+
+    let errors= {};
+    if (emailBuscado == "") {
+            errors.message = "El campo email esta vacio";
+            res.locals.errors = errors;
+            return res.render("login");
+        } else if(req.body.pass == ""){
+            errors.message = "El campo de contraseña esta vacio";
+            res.locals.errors = errors;
+            return res.render("login");
+        }else {
+
     let criterio = {
       where: [{ email: emailBuscado }]
     };
@@ -44,24 +60,34 @@ const mainController = {
             if (rememberMe) {
               res.cookie('userId', result.id, { maxAge: 1000 * 60 * 5 })
             }
-            return res.redirect('/')
+            return res.redirect('/posts/agregar')
             //res.send({data:req.session.user })
           }
           else {
-            return res.render('login')
+            errors.message= "La contraseña es incorrecta";
+            res.locals.errors= errors;
+            return res.render('login');
           }
         } else {
           return res.send('No existe el mail ' + emailBuscado)
         }
       }).catch(function (error) {
         return res.send(error);
-      });
+      });}
+  },
+
+  logout: function (req, res) {
+    req.session.user = undefined;
+    res.locals.user= undefined;
+    res.clearCookie('userId');
+    return res.render('login')
   },
 
   register: function (req, res, next) {
     return res.render('registracion');
   },
 
+  //faltan los controles de acceso
   registerPost: function (req, res, next) {
     let infoForm = req.body;
     let user = {

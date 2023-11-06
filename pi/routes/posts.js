@@ -6,6 +6,8 @@ const postsController= require("../controllers/postsController")
 
 router.get('/detalle/id/:id', postsController.detalle);
 
-router.get('/agregar', postsController.agregarPost);
+router.get('/agregar', postsController.showAgregarPost);
+
+router.post('/agregar', postsController.storeAgregarPost);
 
 module.exports = router;

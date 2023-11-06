@@ -10,8 +10,11 @@
         <section class="center main-content">
         <h1 class="titulo-form">Login</h1>
             <form class= "form" action="/login" method="post">
-                <label for="emailReg">Email:</label><input id="emailReg" type="email" name="email" value="" required>
-                <label for="pass">Clave:</label><input id= "pass" type="password" name="pass" value="" required>
+                <% if (locals.errors) { %>
+                    <p class="mensaje-error"><%= locals.errors.message %></p>
+                  <% } %>
+                <label for="emailReg">Email:</label><input id="emailReg" type="email" name="email" value="">
+                <label for="pass">Clave:</label><input id= "pass" type="password" name="pass" value="">
                 <div>
                     <label for="rememberMe">Recuerdame</label>
                     <input type="checkbox" name="rememberMe" id="rememberMe">
