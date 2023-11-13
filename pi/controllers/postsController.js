@@ -23,7 +23,10 @@ const postsController ={
       },
 
     showAgregarPost: function(req, res, next) {
-      return res.render('agregarPost');
+      if (res.locals.user !=undefined) {
+      return res.render('agregarPost');} else{
+        return res.redirect('/login');
+      }
       },
 
     storeAgregarPost: function (req, res) {

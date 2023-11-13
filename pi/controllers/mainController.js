@@ -2,7 +2,7 @@ const data = require("../database/models");
 const posts = data.Posteo;
 const usuarios = data.Usuario;
 const bcrypt = require('bcryptjs');
-
+const op = data.Sequelize.Op;
 
 const mainController = {
   index: function (req, res, next) {
@@ -151,12 +151,17 @@ const mainController = {
     let busqueda = req.query.busqueda;
     let filtro = {
       where: [
-        { nombre: { [op.like]: `%${busqueda}%` } }
-      ]
+        { textoPost: { [op.like]: `%${busqueda}%` } }
+      ],
+      include: {
+        all: true,
+        nested: true
+      }
     }
-    usuarios.findAll(filtro)
+    posts.findAll(filtro)
       .then(function (results) {
-        return res.render("resultadoBusqueda", { usuarios: results, criterio: busqueda })
+        // res.send(results)
+        return res.render("resultadoBusqueda", { posts: results, criterio: busqueda })
       })
       .catch(function (error) {
         res.send(error)

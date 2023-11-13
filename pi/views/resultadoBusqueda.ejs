@@ -7,9 +7,46 @@
         <%- include('./partials/header') %>
 
             <main>
-                <p>El resultado para "<%= criterio %>" es:</p>
-            </main>
-            <%- include('./partials/footer') %>
+                <p class="mensaje-busqueda">El resultado para "<%= criterio %>" es:</p>
+                <section class="center main-content">
+                    <% for( let i=0; i < posts.length; i++ ) { %>
+                        <article class="post">
+                            <div class="info-usuario ">
+                                <img class="profile" src="<%= posts[i].posteoUsuario.fotoPerfil %>"
+                                    alt="<%= posts[i].posteoUsuario.nombre %>">
+                                <h4>
+                                    <a href="/usuarios/detalleUsuario/id/<%= posts[i].posteoUsuario.id %>">
+                                        <%= posts[i].posteoUsuario.nombre %>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="post-body">
+                                <a href="/posts/detalle/id/<%= posts[i].id %>">
+                                    <img src="<%= posts[i].nombreImg %>" alt="Posteo">
+                                </a>
+                            </div>
+                            <ul class="post-reacciones">
+                                <li>
+                                    <i class="fa-regular fa-heart"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+                            </ul>
+                            <div class="post-comentarios">
+                                <span class="caption-posteo">
+                                    <h3 class="usuario-caption">
+                                        <%= posts[i].posteoUsuario.nombre %>
+                                    </h3>
+                                    <p>
+                                        <%= posts[i].textoPost %>
+                                    </p>
+                                </span>
+                            </div>
+                        </article>
+                        <% } %>
+                </section>
+                <%- include('./partials/footer') %>
 
     </body>
 

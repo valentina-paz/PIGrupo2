@@ -4,8 +4,11 @@
 <%- include('./partials/head') %>
 
     <body>
-        <%- include('./partials/header') %>
-            <!--idUsuario: id, usuario: result, posteos: result.usuarioPosteo -->
+        <% if (locals.user !=undefined) { %>
+            <%- include('./partials/headerLog') %>
+            <% } else { %>
+                <%- include('./partials/header') %>
+            <% } %>
             <main>
                 <% if (idUsuario<0) { %>
                     <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>

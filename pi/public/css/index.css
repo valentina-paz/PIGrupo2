@@ -396,3 +396,8 @@ main {
     flex-wrap: wrap;
     font-weight: bold;
 }
+
+.mensaje-busqueda{
+    color: white;
+    font-weight: bold;
+}

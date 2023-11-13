@@ -6,17 +6,13 @@
     <body>
         <% if (locals.user !=undefined) { %>
             <%- include('./partials/headerLog') %>
-
-                <% } else { %>
-                    <%- include('./partials/header') %>
-                        <% } %>
-                            <main>
+                                            <main>
                                 <% if (idUsuario<0) { %>
                                     <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
                                     <% } else {%>
                                         <div class="user-detail container">
                                             <section class="top main-content">
-                                                <img class="profile" src="<%= user.fotoPerfil %>"
+                                                <img class="profile" src="<%= locals.user.fotoPerfil %>"
                                                     alt="Foto de perfil">
                                                 <div class="info-usuario info-usuario-color">
                                                     <p>
@@ -43,6 +39,10 @@
                                         <% } %>
                             </main>
                             <%- include('./partials/footer') %>
+                <% } else { %>
+                    <%- include('./partials/header') %>
+                        <% } %>
+
     </body>
 
 </html>
