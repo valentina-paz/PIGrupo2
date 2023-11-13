@@ -6,19 +6,17 @@ const bcrypt = require('bcryptjs');
 
 const mainController = {
   index: function (req, res, next) {
-    let id = req.params.id
-    let relacion = {
+    let id = req.params.id;
+    let criterio = {
+      order: [['createdAt', 'DESC']], 
       include: {
         all: true,
         nested: true
       }
-    };
-    let criterio = {
-      order: ['createdAt', 'DESC']
     }
-    posts.findAll(relacion, criterio)
+    posts.findAll(criterio)
       .then(function (result) {
-        // res.send(result)
+         //res.send(result)
         return res.render('index', { data: result });
       })
       .catch(function (error) {
@@ -69,7 +67,11 @@ const mainController = {
               return res.render('login');
             }
           } else {
-            return res.send('No existe el mail ' + emailBuscado)
+            errors.message = 'No existe el mail ' + emailBuscado;
+            res.locals.errors = errors;
+            res.render ('login')
+            console.log(errors);
+            // return res.send('No existe el mail ' + emailBuscado)
           }
         }).catch(function (error) {
           return res.send(error);

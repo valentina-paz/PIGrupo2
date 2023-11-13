@@ -3,82 +3,46 @@
 
 <%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/headerLog') %>
+    <body>
+        <% if (locals.user !=undefined) { %>
+            <%- include('./partials/headerLog') %>
 
-    <main class="main-mi-perfil-usuario">
-        <div class="user-detail container">
-            <section class="top main-content">
-                <img class="profile" src="/img/juan.png" alt="foto de perfil">
-                <div class="info-usuario info-usuario-color">
-                    <p><%=user.name%></p> 
-                    <a class="follow" href="/usuarios/editarMiPerfil/id/<%= user.id %>"><i class="fa-solid fa-user-gear"></i></a>
-                    <ul class="meta">
-                        <li>100 post</li>
-                        <li>200 seguidores</li>
-                        <li>300 seguidos</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-    <main class="main-mi-perfil">
-        <section class="center main-content">
-            <% for( let i=0; i < 2; i++ ) { %>
-                <article class="post">
-                    <div class="info-usuario ">
-                        <img class="profile" src="<%= user.fotoPerfil %>"
-                            alt="<%= user.nombre %>">
-                        <h4>
-                            <a href="/usuarios/detalleUsuario/id/<%= user.id %>">
-                                <%= user.nombre %>
-                            </a>
-                        </h4>
-                    </div>
-                    <div class="post-body">
-                        <a href="/posts/detalle/id/<%= posteos[i].id %>">
-                            <img src="<%= posteos[i].nombreImg %>" alt="posteo">
-                        </a>
-                    </div>
-                    <ul class="post-reacciones">
-                        <li>
-                            <i class="fa-regular fa-heart"></i>
-                        </li>
-                        <li>
-                            <i class="fa-regular fa-comment"></i>
-                        </li>
-                    </ul>
-                    <div class="post-comentarios">
-                        <span class="caption-posteo">
-                            <h3 class="usuario-caption">
-                                <%= user.nombre %>
-                            </h3>
-                            <p>
-                                <%= posteos[i].textoPost %>
-                            </p>
-                        </span>
-
-                        <h4>Comentarios</h4>
-                        <ul>
-                            <% for( let j=0; j < 2; j++ ) { %>
-                                <li><a
-                                        href="/usuarios/detalleUsuario/id/<%= posteos[i].comentarios[j].idUsuario %>">
- <!--cambiar idUsuario a nombre. COMO!!--><%= posteos[i].posteoComentario[j].idUsuario %>
-                                    </a>
-                                    <span>
-                                        <%= posteos[i].comentarios[j].textoComment %>
-                                    </span>
-                                </li>
-                                <% } %>
-                                    <a href="/posts/detalle/id/<%= posteos[i].id %>">Ver
-                                        más...</a>
-                        </ul>
-                    </div>
-                </article>
-                <% } %>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>
-</body>
+                <% } else { %>
+                    <%- include('./partials/header') %>
+                        <% } %>
+                            <main>
+                                <% if (idUsuario<0) { %>
+                                    <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
+                                    <% } else {%>
+                                        <div class="user-detail container">
+                                            <section class="top main-content">
+                                                <img class="profile" src="<%= user.fotoPerfil %>"
+                                                    alt="Foto de perfil">
+                                                <div class="info-usuario info-usuario-color">
+                                                    <p>
+                                                        <%= user.nombre %>
+                                                    </p>
+                                                    <a class="follow" href="">seguir</a>
+                                                    <ul class="meta">
+                                                        <li>100 post</li>
+                                                        <li>200 seguidores</li>
+                                                        <li>300 seguidos</li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                            <section class="bottom">
+                                                <% for( let i=0; i < posteos.length; i++ ) { %>
+                                                    <article class="post">
+                                                        <a href="/posts/detalle/id/<%= posteos[i].id %>">
+                                                            <img src="<%= posteos[i].nombreImg %>" alt="Posteo">
+                                                        </a>
+                                                    </article>
+                                                    <% } %>
+                                            </section>
+                                        </div>
+                                        <% } %>
+                            </main>
+                            <%- include('./partials/footer') %>
+    </body>
 
 </html>

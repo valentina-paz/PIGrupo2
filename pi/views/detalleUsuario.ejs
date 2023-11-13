@@ -7,7 +7,7 @@
         <%- include('./partials/header') %>
             <!--idUsuario: id, usuario: result, posteos: result.usuarioPosteo -->
             <main>
-                <% if (idUsuario>5) { %>
+                <% if (idUsuario<0) { %>
                     <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
                     <% } else {%>
                         <div class="user-detail container">
