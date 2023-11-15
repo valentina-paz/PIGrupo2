@@ -41,6 +41,19 @@ const postsController ={
       .catch(function (error) {
         res.send(error)
       })
+    },
+    deletePost: function (req, res) {
+      let id= Number(req.params.id);
+      let criterio= {
+        where: [{id: id}]
+      }
+      posts.destroy(criterio)
+      .then(function (result) {
+        return res.redirect('/')
+      })
+      .catch(function (error) {
+        res.send(error)
+      })
     }
 };
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */

@@ -401,3 +401,7 @@ main {
     color: white;
     font-weight: bold;
 }
+
+.contenedor-trash{
+    padding-left: 180px;
+}

@@ -11,13 +11,17 @@
             <% } %>
             <main>
                 <div class="post-detail container">
-                    <% if (idPost< 0) { %>
+                    <% if (idPost < 0) { %>
                         <h2 class="sin-resultados">No hay resultados para ese id. Por favor eliia otro</h2>
                     <% } else{ %>
                             <section class="center main-content post">
                                 <div class="info-usuario">
                                     <img class="profile" src="<%= usuario.fotoPerfil %>" alt="Foto de perfil"> 
                                     <p><a href="/usuarios/detalleUsuario/id/<%= usuario.id %>"><%= usuario.nombre %></a></p>
+                                    <% if (locals.user !=undefined && usuario.id == user.id) { %>
+                                        <div class="contenedor-trash">
+                                            <a href="/posts/deletePost/id/<%= idPost %>"><i class="fa-regular fa-trash-can fa-xl" style="color: #ffffff;"></i></a></div>
+                                    <% } %> 
                                 </div>
                                 <img class="photo" src="<%= posteo.nombreImg %>" alt="Foto del posteo">
                             </section>

@@ -10,4 +10,6 @@ router.get('/agregar', postsController.showAgregarPost);
 
 router.post('/agregar', postsController.storeAgregarPost);
 
+router.get('/deletePost/id/:id', postsController.deletePost);
+
 module.exports = router;
