@@ -12,4 +12,8 @@ router.post('/agregar', postsController.storeAgregarPost);
 
 router.get('/deletePost/id/:id', postsController.deletePost);
 
+router.get('/editPost/id/:id', postsController.editPost);
+
+router.post('/updatePost/id/:id', postsController.updatePost);
+
 module.exports = router;

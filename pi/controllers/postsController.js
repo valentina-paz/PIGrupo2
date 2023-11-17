@@ -54,6 +54,41 @@ const postsController ={
       .catch(function (error) {
         res.send(error)
       })
+    },
+    editPost: function (req,res) {
+    let id= Number(req.params.id);
+    posts.findByPk(id)
+    .then(function (result) {
+      res.render("editarPost", {post: result})
+    })
+    .catch(function (error) {
+      res.send(error)
+    })
+    },
+    updatePost: function (req, res) {
+    let id = req.params.id;
+    let info= req.body;
+    let errors = {};
+    if (info.nombreImg == "") {
+      errors.message = "El campo url de la imagen esta vacio";
+      res.locals.errors = errors;
+      return res.redirect(`/posts/editPost/id/${id}`)
+    } else if (info.textoPost == "") {
+      errors.message = "El campo caption esta vacio";
+      res.locals.errors = errors;
+      return res.redirect(`/posts/editPost/id/${id}`)
+    } 
+    let criterio = {
+      where: [{
+          id:id
+        }]}
+    posts.update(info, criterio)
+      .then(function (result) {
+        return res.redirect("/posts/detalle/id/"+ id)
+      })
+      .catch(function (error) {
+        res.send(error)
+      })
     }
 };
 /* cambiar el dato title que le estamos mandando por los correspondientes datos */

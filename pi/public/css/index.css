@@ -403,5 +403,6 @@ main {
 }
 
 .contenedor-trash{
-    padding-left: 180px;
+    padding-left: 150px;
+    justify-content: space-between;
 }

@@ -20,7 +20,8 @@
                                     <p><a href="/usuarios/detalleUsuario/id/<%= usuario.id %>"><%= usuario.nombre %></a></p>
                                     <% if (locals.user !=undefined && usuario.id == user.id) { %>
                                         <div class="contenedor-trash">
-                                            <a href="/posts/deletePost/id/<%= idPost %>"><i class="fa-regular fa-trash-can fa-xl" style="color: #ffffff;"></i></a></div>
+                                            <a href="/posts/deletePost/id/<%= idPost %>"><i class="fa-regular fa-trash-can fa-xl" style="color: #ffffff;"></i></a>
+                                            <a href="/posts/editPost/id/<%= idPost %>"><i class="fa-regular fa-pen-to-square fa-xl" style="color: #ffffff;"></i></a></div>
                                     <% } %> 
                                 </div>
                                 <img class="photo" src="<%= posteo.nombreImg %>" alt="Foto del posteo">
