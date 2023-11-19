@@ -16,4 +16,6 @@ router.get('/editPost/id/:id', postsController.editPost);
 
 router.post('/updatePost/id/:id', postsController.updatePost);
 
+router.post('/add/id/:id', postsController.addComment);
+
 module.exports = router;

@@ -29,8 +29,8 @@
                             <section class="right">
                                 <h4 class="titulo-form">Comentarios</h4>
                                 <section class="comments">
-       <!--form sin action ni method--> <form action="" class="comment-form">
-                                        <input type="text" class="input" placeholder="Agregar comentario">
+                                    <form action= '/posts/add/id/<%=idPost%>' class="comment-form" method="POST" >
+                                        <input type="text" class="input" placeholder="Agregar comentario" name="comentario">
                                         <button type="submit">Comentar</button>
                                     </form>
                                     <div>
