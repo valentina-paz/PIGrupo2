@@ -55,6 +55,7 @@ const postsController = {
       })
       .catch(function (error) {
         res.send(error)
+        res.redirect('/posts/detalle/id/'+ id)
       })
   },
   editPost: function (req, res) {
@@ -72,12 +73,8 @@ const postsController = {
     let info = req.body;
     let errors = {};
     if (info.nombreImg == "") {
-      errors.message = "El campo url de la imagen esta vacio";
-      res.locals.errors = errors;
       return res.redirect(`/posts/editPost/id/${id}`)
     } else if (info.textoPost == "") {
-      errors.message = "El campo caption esta vacio";
-      res.locals.errors = errors;
       return res.redirect(`/posts/editPost/id/${id}`)
     }
     let criterio = {
@@ -105,7 +102,8 @@ const postsController = {
       textoComment: comentario
     })
       .then(function (result) {
-        return res.redirect('/')
+        let idPost = req.params.id;
+        return res.redirect('/posts/detalle/id/'+ idPost);
       })
       .catch(function (error) {
         res.send(error)

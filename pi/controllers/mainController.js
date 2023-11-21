@@ -91,7 +91,7 @@ const mainController = {
   },
 
   //faltan los controles de acceso
-  registerPost: function (req, res, next) {
+  registerPost: function (req, res) {
     let infoForm = req.body;
     let errors = {};
     if (infoForm.email == "") {
@@ -123,7 +123,15 @@ const mainController = {
       res.locals.errors = errors;
       return res.render("registracion");
     } else {
-      let user = {
+      usuarios.findOne({where:[{email: infoForm.email}]})
+      .then(function (result) {
+        console.log(result);
+        if (result != undefined) {
+          errors.message = "Este mail ya esta registrado";
+          res.locals.errors = errors;
+          return res.render("registracion");
+        } else {
+          let user = {
         //los nombres de las prop tienen q ser = a nombre de la columna.
         nombre: infoForm.nombre,
         email: infoForm.email,
@@ -144,12 +152,15 @@ const mainController = {
           res.locals.errors = errors;
           return res.redirect("registracion")
         });
+        }
+      })
     }
   },
-
   busqueda: function (req, res) {
     let busqueda = req.query.busqueda;
     let filtro = {
+      limit: 10,
+      order: [['createdAt', 'DESC']],
       where: [
         { textoPost: { [op.like]: `%${busqueda}%` } }
       ],
@@ -160,13 +171,12 @@ const mainController = {
     }
     posts.findAll(filtro)
       .then(function (results) {
-        // res.send(results)
+        //res.send(results)
         return res.render("resultadoBusqueda", { posts: results, criterio: busqueda })
       })
       .catch(function (error) {
         res.send(error)
       })
-
   },
 };
 

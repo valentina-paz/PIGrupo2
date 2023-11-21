@@ -4,9 +4,16 @@
 <%- include('./partials/head') %>
 
     <body>
-        <%- include('./partials/header') %>
+        <% if (locals.user !=undefined) { %>
+            <%- include('./partials/headerLog') %>
+            <% } else { %>
+                <%- include('./partials/header') %>
+            <% } %>
 
             <main>
+                <% if (posts.length <= 0 ) { %>
+                    <p class="mensaje-error">No hay resultados para su criterio de busqueda: <%= criterio %></p>
+                <% } else { %>   
                 <p class="mensaje-busqueda">El resultado para "<%= criterio %>" es:</p>
                 <section class="center main-content">
                     <% for( let i=0; i < posts.length; i++ ) { %>
@@ -45,7 +52,9 @@
                             </div>
                         </article>
                         <% } %>
+
                 </section>
+                <% } %>
                 <%- include('./partials/footer') %>
 
     </body>
