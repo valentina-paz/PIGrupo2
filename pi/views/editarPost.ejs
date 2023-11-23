@@ -10,8 +10,8 @@
         <section class="center main-content">
         <h1 class="titulo-form">Editar Post</h1>
         <form class= "form" action="/posts/updatePost/id/<%= post.id %>" method="POST">
-            <label for="nombreImg">URL:</label><input id= "nombreImg" type="text" name="nombreImg" value="<%=post.nombreImg %>">
-            <label for="textoPost">Caption:</label><input id="textoPost" type="text" name="textoPost" value="<%=post.textoPost %>">
+            <label for="nombreImg">URL:</label><input id= "nombreImg" type="text" name="nombreImg" value="<%=post.nombreImg %>" required>
+            <label for="textoPost">Caption:</label><input id="textoPost" type="text" name="textoPost" value="<%=post.textoPost %>" required>
             <button type="submit">Enviar</button>
         </form>
 

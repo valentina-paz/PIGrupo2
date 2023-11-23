@@ -9,13 +9,13 @@
     <main>
         <section class="center main-content">
         <h1 class="titulo-form">Editar perfil</h1>
-        <form class= "form" action="/login" method="GET">
-            <label for="emailReg">Email:</label><input id="emailReg" type="email" name="email" value="" required>
-            <label for="nombre">Nombre:</label><input id="nombre" type="text" name="nombre" value="" required>
-            <label for="pass">Clave:</label><input id= "pass" type="password" name="pass" value="" required>
-            <label for="foto">Foto de perfil:</label><input id="foto" type="text" name="fotoPerfil" value="">
-            <label for="fecha">Fecha de nacimiento:</label><input id="fecha" type="text" name="fecha" value="">
-            <label for="dni">DNI:</label><input id="dni" type="number" name="dni" value="" required>
+        <form class= "form" action="/usuarios/editarMiPerfil/id/<%= usuarios.id %>" method="POST">
+            <label for="emailReg">Email:</label><input id="emailReg" type="email" name="email" value="<%=usuarios.email %>" required>
+            <label for="nombre">Nombre:</label><input id="nombre" type="text" name="nombre" value="<%=usuarios.nombre %>" required>
+            <label for="pass">Clave:</label><input id= "pass" type="password" name="pass" value="<%=usuarios.pass %>" required>
+            <label for="foto">Foto de perfil:</label><input id="foto" type="text" name="fotoPerfil" value="<%=usuarios.fotoPerfil %>" required>
+            <label for="fecha">Fecha de nacimiento:</label><input id="fecha" type="text" name="fecha" value="<%=usuarios.fecha %>" required>
+            <label for="dni">DNI:</label><input id="dni" type="number" name="dni" value="<%=usuarios.dni %>" required>
             <button class="" type="submit">Enviar</button>
         </form>
         </section>

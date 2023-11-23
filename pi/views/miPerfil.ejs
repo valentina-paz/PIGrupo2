@@ -18,6 +18,10 @@
                                                     <p>
                                                         <%= user.nombre %>
                                                     </p>
+                                                    <% if (locals.user !=undefined && idUsuario == user.id) { %>
+                                                        <div class="contenedor-trash">
+                                                            <a href="/usuarios/editarMiPerfil/id/<%= user.id %>"><i class="fa-regular fa-pen-to-square fa-xl" style="color: mediumseagreen;"></i></a></div>
+                                                    <% } %> 
                                                     <a class="follow" href="">seguir</a>
                                                     <ul class="meta">
                                                         <li><%= posteos.length %> posteos</li>

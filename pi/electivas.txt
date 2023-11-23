@@ -4,4 +4,6 @@ Recordarme (1 pt)
 
 Imagen de perfil (0,5 pt)
 
+Validaciones interactivas (0,5 pt)
 
+Editar datos del usuario (1 pt)

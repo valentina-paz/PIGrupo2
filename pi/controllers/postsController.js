@@ -71,7 +71,6 @@ const postsController = {
   updatePost: function (req, res) {
     let id = req.params.id;
     let info = req.body;
-    let errors = {};
     if (info.nombreImg == "") {
       return res.redirect(`/posts/editPost/id/${id}`)
     } else if (info.textoPost == "") {
