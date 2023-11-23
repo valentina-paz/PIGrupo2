@@ -5,7 +5,7 @@ const op = data.Sequelize.Op;
 let comentarios = data.Comentario;
 
 const postsController = {
-  detalle: function (req, res, next) {
+  detalle: function (req, res) {
     let id = req.params.id;
     let relacion = {
       include: {
@@ -15,7 +15,6 @@ const postsController = {
     };
     posts.findByPk(id, relacion)
       .then(function (result) {
-        // res.send(result)
         return res.render('detallePost', { idPost: id, usuario: result.posteoUsuario, posteo: result });
       })
       .catch(function (error) {
@@ -23,7 +22,7 @@ const postsController = {
       })
   },
 
-  showAgregarPost: function (req, res, next) {
+  showAgregarPost: function (req, res) {
     if (res.locals.user != undefined) {
       return res.render('agregarPost');
     } else {
@@ -33,11 +32,9 @@ const postsController = {
 
   storeAgregarPost: function (req, res) {
     let info = req.body;
-    //return res.send(info);
     info.idUsuario = req.session.user.id
     posts.create(info)
       .then(function (result) {
-        // res.send(result)
         return res.redirect('/')
       })
       .catch(function (error) {
@@ -94,7 +91,6 @@ const postsController = {
       return res.redirect('/login')
     } else {
       let comentario = req.body.comentario;
-    //res.send(info)
     comentarios.create({
       idPost: req.params.id,
       idUsuario: req.session.user.id,

@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const op = data.Sequelize.Op;
 
 const mainController = {
-  index: function (req, res, next) {
+  index: function (req, res) {
     let id = req.params.id;
     let criterio = {
       order: [['createdAt', 'DESC']], 
@@ -16,7 +16,6 @@ const mainController = {
     }
     posts.findAll(criterio)
       .then(function (result) {
-         //res.send(result)
         return res.render('index', { data: result });
       })
       .catch(function (error) {
@@ -24,11 +23,11 @@ const mainController = {
       })
 
   },
-  login: function (req, res, next) {
+  login: function (req, res) {
     return res.render('login');
   },
 
-  loginPost: function (req, res, next) {
+  loginPost: function (req, res) {
     let emailBuscado = req.body.email;
     let pass = req.body.pass;
     let rememberMe = req.body.rememberMe;
@@ -59,7 +58,6 @@ const mainController = {
                 res.cookie('userId', result.id, { maxAge: 1000 * 60 * 5 })
               }
               return res.redirect('/posts/agregar')
-              //res.send({data:req.session.user })
             }
             else {
               errors.message = "La contraseña es incorrecta";
@@ -71,7 +69,6 @@ const mainController = {
             res.locals.errors = errors;
             res.render ('login')
             console.log(errors);
-            // return res.send('No existe el mail ' + emailBuscado)
           }
         }).catch(function (error) {
           return res.send(error);
@@ -86,11 +83,10 @@ const mainController = {
     return res.render('login')
   },
 
-  register: function (req, res, next) {
+  register: function (req, res) {
     return res.render('registracion');
   },
 
-  //faltan los controles de acceso
   registerPost: function (req, res) {
     let infoForm = req.body;
     let errors = {};
@@ -132,7 +128,6 @@ const mainController = {
           return res.render("registracion");
         } else {
           let user = {
-        //los nombres de las prop tienen q ser = a nombre de la columna.
         nombre: infoForm.nombre,
         email: infoForm.email,
         pass: bcrypt.hashSync(infoForm.pass, 10),
@@ -171,7 +166,6 @@ const mainController = {
     }
     posts.findAll(filtro)
       .then(function (results) {
-        //res.send(results)
         return res.render("resultadoBusqueda", { posts: results, criterio: busqueda })
       })
       .catch(function (error) {
