@@ -132,7 +132,7 @@ const mainController = {
         email: infoForm.email,
         pass: bcrypt.hashSync(infoForm.pass, 10),
         fotoPerfil: infoForm.fotoPerfil,
-        fechaNacimiento: infoForm.fecha,
+        fecha: infoForm.fecha,
         dni: infoForm.dni,
         rembember_token: 'false'
       }
@@ -153,7 +153,7 @@ const mainController = {
   },
   busqueda: function (req, res) {
     let busqueda = req.query.busqueda;
-    let filtro = {
+      let filtro = {
       limit: 10,
       order: [['createdAt', 'DESC']],
       where: [
@@ -166,7 +166,7 @@ const mainController = {
     }
     posts.findAll(filtro)
       .then(function (results) {
-        return res.render("resultadoBusqueda", { posts: results, criterio: busqueda })
+        return res.render("resultadoBusqueda", { posts: results, criterio: busqueda})
       })
       .catch(function (error) {
         res.send(error)

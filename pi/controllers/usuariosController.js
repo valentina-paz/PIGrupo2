@@ -1,6 +1,7 @@
 const data= require("../database/models");
 let usuarios= data.Usuario;
 let posteos= data.Posteo;
+const bcrypt = require('bcryptjs');
 
 const usuariosController = {
     miPerfil: function(req, res) {
@@ -54,8 +55,16 @@ const usuariosController = {
           where: [{
             id: id
           }]
+        };
+        let actualizacion= {
+          nombre: info.nombre,
+          email: info.email,
+          pass: bcrypt.hashSync(info.pass, 10),
+          fotoPerfil: info.fotoPerfil,
+          fecha: info.fecha,
+          dni: info.dni,
         }
-        usuarios.update(info, criterio)
+        usuarios.update(actualizacion, criterio)
           .then(function (result) {
             return res.redirect("/usuarios/miPerfil/id/" + id)
           })
