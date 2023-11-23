@@ -39,7 +39,8 @@
                                         <div class="post-comentarios">
                                             <span class="caption-posteo">
                                                 <h3 class="usuario-caption">
-                                                    <%= data[i].posteoUsuario.nombre %>
+                                                    <a href="/usuarios/detalleUsuario/id/<%= data[i].posteoUsuario.id %>">
+                                                        <%= data[i].posteoUsuario.nombre %>
                                                 </h3>
                                                 <p>
                                                     <%= data[i].textoPost %>
@@ -52,18 +53,16 @@
                                                     <% if (data[i].posteoComentario[j] != undefined) { %>
                                                     <li><a
                                                             href="/usuarios/detalleUsuario/id/<%= data[i].posteoComentario[j].comentarioUsuario.id %>">
-                                                            <%= data[i].posteoComentario[j].comentarioUsuario.nombre%>
+                                                            <%=data[i].posteoComentario[j].comentarioUsuario.nombre%>
                                                         </a>
                                                         <span>
                                                             <%= data[i].posteoComentario[j].textoComment %>
                                                         </span>
                                                     </li>
-                                                        <a href="/posts/detalle/id/<%= data[i].id %>">Ver
-                                                            más...</a>
-                                                    <% } %>
-                                                        
+                                                    <% } %> 
                                                 <% } %>
-                                                
+                                                <a href="/posts/detalle/id/<%= data[i].id %>">Ver
+                                                    más...</a>
                                             </ul>
                                         </div>
                                     </article>

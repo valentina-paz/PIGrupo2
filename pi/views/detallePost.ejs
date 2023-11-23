@@ -34,7 +34,7 @@
                                         <button type="submit">Comentar</button>
                                     </form>
                                     <div>
-                                        <% for( let i=0; i < posteo.posteoComentario.length; i++ ) { %>
+                                        <% for( let i= posteo.posteoComentario.length - 1; i >= 0; i-- ) { %>
                                         <article class="comment">
                                             <img class = "profile" src="<%= posteo.posteoComentario[i].comentarioUsuario.fotoPerfil %>" alt="<%= posteo.posteoComentario[i].comentarioUsuario.nombre %>">
                                             <section class="content">
